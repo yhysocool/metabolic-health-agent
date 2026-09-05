@@ -403,19 +403,6 @@ export default function App() {
     }
   }
 
-  async function readSpO2Once() {
-    setSnapshotBusy(true);
-    try {
-      const snapshot = await vivoOvernightHealth.readSnapshot();
-      setVivoSnapshot(snapshot);
-      setVivoMessage(`${vivoStatusLabel(snapshot.privateHealth.status)}：${snapshot.privateHealth.message}`);
-    } catch {
-      setVivoMessage("单次读取失败，请查看 Provider 权限和设备状态。");
-    } finally {
-      setSnapshotBusy(false);
-    }
-  }
-
   async function checkVivoAccess() {
     setSnapshotBusy(true);
     try {

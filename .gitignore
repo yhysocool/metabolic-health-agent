@@ -16,6 +16,9 @@ venv/
 **/.env.local
 !**/.env.example
 .npm-cache/
+.gradle-tmp/
+*.tsbuildinfo
+*.log
 
 # Node / Capacitor
 node_modules/
