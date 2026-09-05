@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 合成数据本地联调使用；发布前端到端改为 HTTPS。 -->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

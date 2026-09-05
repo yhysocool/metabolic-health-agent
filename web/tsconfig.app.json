@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": false
+  },
+  "include": [
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "vite-env.d.ts",
+    "next-env.d.ts"
+  ],
+  "exclude": ["node_modules", "dist", "worker", "db"]
+}

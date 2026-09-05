@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "reference_id": "nhanes-adult-30-39-unweighted-v1",
+  "source": "NHANES public-use data",
+  "cycles": ["2015-2016", "2017-2018"],
+  "cohort": {
+    "age_min": 30,
+    "age_max": 39,
+    "records": 1838,
+    "aggregation": "unweighted descriptive quantiles"
+  },
+  "source_artifact": {
+    "records": 11848,
+    "generated_at": "2026-08-26T07:04:29.715031+00:00",
+    "sha256": "851d1231ae1308f3eb03b1de56787583cd5a36656847b06afd501935c9268753"
+  },
+  "metrics": {
+    "age_year": {"p25": 32.0, "median": 34.0, "p75": 37.0, "observed": 1838},
+    "height_cm": {"p25": 160.1, "median": 167.3, "p75": 174.65, "observed": 1727},
+    "weight_kg": {"p25": 67.7, "median": 80.0, "p75": 97.35, "observed": 1727},
+    "bmi_kg_m2": {"p25": 24.6, "median": 28.6, "p75": 33.9, "observed": 1717},
+    "sleep_hours": {"p25": 6.93, "median": 7.57, "p75": 8.5, "observed": 1829},
+    "activity_equivalent_minutes_week": {"p25": 60.0, "median": 480.0, "p75": 1650.0, "observed": 1837}
+  },
+  "limitations": [
+    "This fixture contains aggregate values only and no participant-level records.",
+    "The quantiles are unweighted and are used only to calibrate a local synthetic demo.",
+    "Steps and resting heart rate are not present in this project NHANES extract."
+  ]
+}

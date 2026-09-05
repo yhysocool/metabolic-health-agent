@@ -1,0 +1,9 @@
+# 云端接收服务最小依赖；AI/LangGraph/FAISS 保留在本地分析环境。
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+pydantic==2.13.4
+pydantic-settings==2.15.0
+SQLAlchemy==2.0.52
+alembic==1.19.1
+psycopg[binary]==3.3.4
+cryptography>=43.0,<48.0

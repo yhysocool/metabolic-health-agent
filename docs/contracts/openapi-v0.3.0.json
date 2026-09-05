@@ -1,0 +1,1167 @@
+{
+  "components": {
+    "schemas": {
+      "Gender": {
+        "description": "用户自述性别；允许不披露，避免强迫收集敏感信息。",
+        "enum": [
+          "male",
+          "female",
+          "other",
+          "undisclosed"
+        ],
+        "title": "Gender",
+        "type": "string"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "title": "HTTPValidationError",
+        "type": "object"
+      },
+      "HealthEvent": {
+        "description": "已持久化的健康事件。",
+        "properties": {
+          "end_timestamp": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End Timestamp"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "metric": {
+            "$ref": "#/components/schemas/HealthMetric"
+          },
+          "source": {
+            "$ref": "#/components/schemas/HealthSource"
+          },
+          "source_record_id": {
+            "anyOf": [
+              {
+                "maxLength": 128,
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Record Id"
+          },
+          "timestamp": {
+            "format": "date-time",
+            "title": "Timestamp",
+            "type": "string"
+          },
+          "unit": {
+            "maxLength": 32,
+            "minLength": 1,
+            "title": "Unit",
+            "type": "string"
+          },
+          "user_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "User Id",
+            "type": "string"
+          },
+          "value": {
+            "title": "Value",
+            "type": "number"
+          }
+        },
+        "required": [
+          "user_id",
+          "source",
+          "metric",
+          "value",
+          "unit"
+        ],
+        "title": "HealthEvent",
+        "type": "object"
+      },
+      "HealthEventCreate": {
+        "description": "上传健康事件的请求体。",
+        "properties": {
+          "end_timestamp": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End Timestamp"
+          },
+          "metric": {
+            "$ref": "#/components/schemas/HealthMetric"
+          },
+          "source": {
+            "$ref": "#/components/schemas/HealthSource"
+          },
+          "source_record_id": {
+            "anyOf": [
+              {
+                "maxLength": 128,
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Record Id"
+          },
+          "timestamp": {
+            "format": "date-time",
+            "title": "Timestamp",
+            "type": "string"
+          },
+          "unit": {
+            "maxLength": 32,
+            "minLength": 1,
+            "title": "Unit",
+            "type": "string"
+          },
+          "user_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "User Id",
+            "type": "string"
+          },
+          "value": {
+            "title": "Value",
+            "type": "number"
+          }
+        },
+        "required": [
+          "user_id",
+          "source",
+          "metric",
+          "value",
+          "unit"
+        ],
+        "title": "HealthEventCreate",
+        "type": "object"
+      },
+      "HealthEventList": {
+        "description": "指定回看窗口内的健康事件集合。",
+        "properties": {
+          "count": {
+            "minimum": 0.0,
+            "title": "Count",
+            "type": "integer"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/HealthEvent"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "user_id": {
+            "title": "User Id",
+            "type": "string"
+          },
+          "window_days": {
+            "maximum": 365.0,
+            "minimum": 1.0,
+            "title": "Window Days",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "user_id",
+          "window_days",
+          "count",
+          "items"
+        ],
+        "title": "HealthEventList",
+        "type": "object"
+      },
+      "HealthGoal": {
+        "description": "当前首要健康管理目标。",
+        "enum": [
+          "weight_management",
+          "metabolic_health",
+          "sleep_improvement"
+        ],
+        "title": "HealthGoal",
+        "type": "string"
+      },
+      "HealthLabel": {
+        "description": "非诊断性的健康关注等级。",
+        "enum": [
+          "normal",
+          "attention",
+          "high_attention"
+        ],
+        "title": "HealthLabel",
+        "type": "string"
+      },
+      "HealthMetric": {
+        "description": "第一阶段统一支持的健康指标。",
+        "enum": [
+          "sleep",
+          "steps",
+          "heart_rate",
+          "blood_glucose",
+          "insulin",
+          "weight",
+          "bmi",
+          "exercise"
+        ],
+        "title": "HealthMetric",
+        "type": "string"
+      },
+      "HealthPlan": {
+        "description": "通过安全校验并已持久化的健康计划。",
+        "properties": {
+          "date": {
+            "format": "date",
+            "title": "Date",
+            "type": "string"
+          },
+          "diet_plan": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Diet Plan",
+            "type": "array"
+          },
+          "exercise_plan": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Exercise Plan",
+            "type": "array"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "reason": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "sleep_plan": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Sleep Plan",
+            "type": "array"
+          },
+          "user_id": {
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id",
+          "date",
+          "exercise_plan",
+          "diet_plan",
+          "sleep_plan",
+          "reason"
+        ],
+        "title": "HealthPlan",
+        "type": "object"
+      },
+      "HealthSource": {
+        "description": "健康事件允许的数据来源。",
+        "enum": [
+          "mock",
+          "nhanes",
+          "vivo",
+          "hospital"
+        ],
+        "title": "HealthSource",
+        "type": "string"
+      },
+      "HealthStatus": {
+        "description": "健康分析服务的可解释、非诊断输出。",
+        "properties": {
+          "bmi": {
+            "title": "Bmi",
+            "type": "number"
+          },
+          "disclaimer": {
+            "default": "本结果仅用于健康管理参考，不构成医疗诊断或治疗建议。",
+            "title": "Disclaimer",
+            "type": "string"
+          },
+          "homa_ir": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Homa Ir"
+          },
+          "label": {
+            "$ref": "#/components/schemas/HealthLabel"
+          },
+          "observations": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Observations",
+            "type": "array"
+          },
+          "score": {
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Score",
+            "type": "number"
+          },
+          "trends": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/TrendDirection"
+            },
+            "title": "Trends",
+            "type": "object"
+          },
+          "user_id": {
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id",
+          "score",
+          "label",
+          "bmi",
+          "trends",
+          "observations"
+        ],
+        "title": "HealthStatus",
+        "type": "object"
+      },
+      "IntegrationProvider": {
+        "description": "当前允许进入同步状态表的数据提供方。",
+        "enum": [
+          "vivo"
+        ],
+        "title": "IntegrationProvider",
+        "type": "string"
+      },
+      "TrendDirection": {
+        "description": "趋势分析的统一输出。",
+        "enum": [
+          "increase",
+          "decrease",
+          "stable"
+        ],
+        "title": "TrendDirection",
+        "type": "string"
+      },
+      "UserProfile": {
+        "description": "已持久化的用户档案。",
+        "properties": {
+          "age": {
+            "maximum": 120.0,
+            "minimum": 18.0,
+            "title": "Age",
+            "type": "integer"
+          },
+          "bmi": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "maximum": 100.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bmi"
+          },
+          "gender": {
+            "$ref": "#/components/schemas/Gender",
+            "default": "undisclosed"
+          },
+          "goal": {
+            "$ref": "#/components/schemas/HealthGoal"
+          },
+          "height": {
+            "description": "身高，单位 cm",
+            "exclusiveMinimum": 0.0,
+            "maximum": 260.0,
+            "title": "Height",
+            "type": "number"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "weight": {
+            "description": "体重，单位 kg",
+            "exclusiveMinimum": 0.0,
+            "maximum": 500.0,
+            "title": "Weight",
+            "type": "number"
+          }
+        },
+        "required": [
+          "age",
+          "height",
+          "weight",
+          "goal",
+          "id"
+        ],
+        "title": "UserProfile",
+        "type": "object"
+      },
+      "UserProfileCreate": {
+        "description": "创建用户档案时由客户端提交的字段。",
+        "properties": {
+          "age": {
+            "maximum": 120.0,
+            "minimum": 18.0,
+            "title": "Age",
+            "type": "integer"
+          },
+          "bmi": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "maximum": 100.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bmi"
+          },
+          "gender": {
+            "$ref": "#/components/schemas/Gender",
+            "default": "undisclosed"
+          },
+          "goal": {
+            "$ref": "#/components/schemas/HealthGoal"
+          },
+          "height": {
+            "description": "身高，单位 cm",
+            "exclusiveMinimum": 0.0,
+            "maximum": 260.0,
+            "title": "Height",
+            "type": "number"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "weight": {
+            "description": "体重，单位 kg",
+            "exclusiveMinimum": 0.0,
+            "maximum": 500.0,
+            "title": "Weight",
+            "type": "number"
+          }
+        },
+        "required": [
+          "age",
+          "height",
+          "weight",
+          "goal"
+        ],
+        "title": "UserProfileCreate",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "ctx": {
+            "title": "Context",
+            "type": "object"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "title": "Location",
+            "type": "array"
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError",
+        "type": "object"
+      },
+      "VivoBridgeRecord": {
+        "description": "Android 桥接层向后端提交的项目自有中间格式。\n\n字段名不冒充 vivo Health Kit 的官方 DTO；桥接层负责把获授权的 SDK\n数据转换为本格式，后端再通过 Adapter 做单位和事件模型归一化。",
+        "properties": {
+          "end_time": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End Time"
+          },
+          "metric": {
+            "$ref": "#/components/schemas/HealthMetric"
+          },
+          "record_id": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Record Id",
+            "type": "string"
+          },
+          "start_time": {
+            "format": "date-time",
+            "title": "Start Time",
+            "type": "string"
+          },
+          "unit": {
+            "maxLength": 32,
+            "minLength": 1,
+            "title": "Unit",
+            "type": "string"
+          },
+          "value": {
+            "title": "Value",
+            "type": "number"
+          }
+        },
+        "required": [
+          "record_id",
+          "metric",
+          "value",
+          "unit",
+          "start_time"
+        ],
+        "title": "VivoBridgeRecord",
+        "type": "object"
+      },
+      "VivoSyncRequest": {
+        "description": "单次增量同步请求；每条记录必须带稳定的来源记录 ID。",
+        "properties": {
+          "cursor": {
+            "anyOf": [
+              {
+                "maxLength": 512,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cursor"
+          },
+          "device_id": {
+            "maxLength": 256,
+            "minLength": 1,
+            "title": "Device Id",
+            "type": "string"
+          },
+          "records": {
+            "items": {
+              "$ref": "#/components/schemas/VivoBridgeRecord"
+            },
+            "maxItems": 1000,
+            "minItems": 1,
+            "title": "Records",
+            "type": "array"
+          },
+          "user_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id",
+          "device_id",
+          "records"
+        ],
+        "title": "VivoSyncRequest",
+        "type": "object"
+      },
+      "VivoSyncResult": {
+        "description": "vivo 同步 API 的非敏感响应。",
+        "properties": {
+          "created": {
+            "minimum": 0.0,
+            "title": "Created",
+            "type": "integer"
+          },
+          "cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cursor"
+          },
+          "last_success_at": {
+            "format": "date-time",
+            "title": "Last Success At",
+            "type": "string"
+          },
+          "provider": {
+            "$ref": "#/components/schemas/IntegrationProvider",
+            "default": "vivo"
+          },
+          "received": {
+            "minimum": 0.0,
+            "title": "Received",
+            "type": "integer"
+          },
+          "unchanged": {
+            "minimum": 0.0,
+            "title": "Unchanged",
+            "type": "integer"
+          },
+          "updated": {
+            "minimum": 0.0,
+            "title": "Updated",
+            "type": "integer"
+          },
+          "user_id": {
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id",
+          "received",
+          "created",
+          "updated",
+          "unchanged",
+          "last_success_at"
+        ],
+        "title": "VivoSyncResult",
+        "type": "object"
+      },
+      "VivoSyncStatus": {
+        "description": "Dashboard 可查询的同步状态，不返回设备原始标识。",
+        "properties": {
+          "connected": {
+            "title": "Connected",
+            "type": "boolean"
+          },
+          "cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cursor"
+          },
+          "last_record_count": {
+            "default": 0,
+            "minimum": 0.0,
+            "title": "Last Record Count",
+            "type": "integer"
+          },
+          "last_success_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Success At"
+          },
+          "provider": {
+            "$ref": "#/components/schemas/IntegrationProvider",
+            "default": "vivo"
+          },
+          "user_id": {
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id",
+          "connected"
+        ],
+        "title": "VivoSyncStatus",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "description": "面向亚健康成年人的健康管理辅助 Agent（Mock 验证与 vivo 接入骨架）",
+    "title": "Metabolic Health Agent",
+    "version": "0.3.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/agent/plan/{user_id}": {
+      "get": {
+        "description": "执行完整 LangGraph 工作流并返回通过安全检查的计划。",
+        "operationId": "get_agent_plan_api_agent_plan__user_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "title": "User Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthPlan"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Agent Plan",
+        "tags": [
+          "agent"
+        ]
+      }
+    },
+    "/api/health/event": {
+      "post": {
+        "description": "接收已标准化的单个健康事件。真实来源批量数据应先通过 Adapter。",
+        "operationId": "create_health_event_api_health_event_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HealthEventCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthEvent"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create Health Event",
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/api/health/events/{user_id}": {
+      "get": {
+        "description": "返回指定窗口内按时间升序排列的标准健康事件。",
+        "operationId": "get_health_events_api_health_events__user_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "title": "User Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "days",
+            "required": false,
+            "schema": {
+              "default": 30,
+              "maximum": 365,
+              "minimum": 1,
+              "title": "Days",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthEventList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Health Events",
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/api/health/status/{user_id}": {
+      "get": {
+        "description": "返回最近 30 天的非诊断性健康管理状态。",
+        "operationId": "get_health_status_api_health_status__user_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "title": "User Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthStatus"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Health Status",
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/api/integrations/vivo/status/{user_id}": {
+      "get": {
+        "description": "返回不含设备原始标识的最近同步状态。",
+        "operationId": "get_vivo_sync_status_api_integrations_vivo_status__user_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "title": "User Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VivoSyncStatus"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Vivo Sync Status",
+        "tags": [
+          "integrations"
+        ]
+      }
+    },
+    "/api/integrations/vivo/sync": {
+      "post": {
+        "description": "接收 Android 桥接层已经获授权并转换后的增量记录。",
+        "operationId": "sync_vivo_records_api_integrations_vivo_sync_post",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "authorization",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VivoSyncRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VivoSyncResult"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Sync Vivo Records",
+        "tags": [
+          "integrations"
+        ]
+      }
+    },
+    "/api/user/profile": {
+      "post": {
+        "description": "创建或按 ID 更新用户档案。",
+        "operationId": "upsert_user_profile_api_user_profile_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserProfileCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserProfile"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Upsert User Profile",
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/user/profile/{user_id}": {
+      "get": {
+        "description": "读取单个用户档案。",
+        "operationId": "get_user_profile_api_user_profile__user_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "title": "User Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserProfile"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get User Profile",
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/healthz": {
+      "get": {
+        "description": "不依赖数据库和外部模型的进程存活检查。",
+        "operationId": "health_check_healthz_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "title": "Response Health Check Healthz Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Health Check",
+        "tags": [
+          "system"
+        ]
+      }
+    }
+  }
+}

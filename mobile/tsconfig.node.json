@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "types": ["node", "vite/client"]
+  },
+  "include": [
+    "vite.config.ts",
+    "capacitor.config.ts",
+    "tests/**/*.ts",
+    "src/domain/**/*.ts",
+    "src/data/**/*.ts",
+    "src/native/**/*.ts",
+    "src/vite-env.d.ts"
+  ]
+}

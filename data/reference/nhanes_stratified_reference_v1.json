@@ -1,0 +1,4337 @@
+{
+  "schema_version": 1,
+  "reference_id": "nhanes-stratified-unweighted-v1",
+  "generated_at": "2026-08-31T19:37:46.776925+00:00",
+  "source": {
+    "dataset": "NHANES public-use data",
+    "provider": "CDC NCHS",
+    "cycles": [
+      "2015-2016",
+      "2017-2018"
+    ],
+    "aggregation": "unweighted descriptive statistics",
+    "weighted_statistics": false,
+    "weights_available_in_input": true,
+    "quality_gate": {
+      "passed": true,
+      "input_records": 11848
+    },
+    "source_artifact": {
+      "path": "data_pipeline/output/health_profile.csv",
+      "sha256": "851d1231ae1308f3eb03b1de56787583cd5a36656847b06afd501935c9268753",
+      "records": 11848
+    }
+  },
+  "age_bands": [
+    {
+      "label": "18-29",
+      "min": 18,
+      "max": 29
+    },
+    {
+      "label": "30-39",
+      "min": 30,
+      "max": 39
+    },
+    {
+      "label": "40-49",
+      "min": 40,
+      "max": 49
+    },
+    {
+      "label": "50-59",
+      "min": 50,
+      "max": 59
+    },
+    {
+      "label": "60-69",
+      "min": 60,
+      "max": 69
+    },
+    {
+      "label": "70-79",
+      "min": 70,
+      "max": 79
+    },
+    {
+      "label": "80-100",
+      "min": 80,
+      "max": 100
+    }
+  ],
+  "genders": [
+    "female",
+    "male"
+  ],
+  "metrics": [
+    {
+      "metric_code": "demographic.age",
+      "unit": "year",
+      "source_column": "demographic.age"
+    },
+    {
+      "metric_code": "body.height_cm",
+      "unit": "cm",
+      "source_column": "body.height_cm"
+    },
+    {
+      "metric_code": "body.weight_kg",
+      "unit": "kg",
+      "source_column": "body.weight_kg"
+    },
+    {
+      "metric_code": "body.BMI_kg_m2",
+      "unit": "kg/m²",
+      "source_column": "body.BMI_kg_m2"
+    },
+    {
+      "metric_code": "body.waist_cm",
+      "unit": "cm",
+      "source_column": "body.waist_cm"
+    },
+    {
+      "metric_code": "body.systolic_bp_mmHg",
+      "unit": "mmHg",
+      "source_column": "body.systolic_bp_mmHg"
+    },
+    {
+      "metric_code": "body.diastolic_bp_mmHg",
+      "unit": "mmHg",
+      "source_column": "body.diastolic_bp_mmHg"
+    },
+    {
+      "metric_code": "metabolic.glucose_mmol_L",
+      "unit": "mmol/L",
+      "source_column": "metabolic.glucose_mmol_L"
+    },
+    {
+      "metric_code": "metabolic.insulin_uU_mL",
+      "unit": "µU/mL",
+      "source_column": "metabolic.insulin_uU_mL"
+    },
+    {
+      "metric_code": "metabolic.HOMA_IR",
+      "unit": "ratio",
+      "source_column": "metabolic.HOMA_IR"
+    },
+    {
+      "metric_code": "metabolic.HbA1c_percent",
+      "unit": "%",
+      "source_column": "metabolic.HbA1c_percent"
+    },
+    {
+      "metric_code": "metabolic.LDL_mmol_L",
+      "unit": "mmol/L",
+      "source_column": "metabolic.LDL_mmol_L"
+    },
+    {
+      "metric_code": "metabolic.HDL_mmol_L",
+      "unit": "mmol/L",
+      "source_column": "metabolic.HDL_mmol_L"
+    },
+    {
+      "metric_code": "metabolic.triglyceride_mmol_L",
+      "unit": "mmol/L",
+      "source_column": "metabolic.triglyceride_mmol_L"
+    },
+    {
+      "metric_code": "lifestyle.sleep_hours",
+      "unit": "hour/night",
+      "source_column": "lifestyle.sleep_hours"
+    },
+    {
+      "metric_code": "lifestyle.activity.minutes_per_week",
+      "unit": "minute/week",
+      "source_column": "lifestyle.activity.minutes_per_week"
+    },
+    {
+      "metric_code": "lifestyle.activity.equivalent_minutes_per_week",
+      "unit": "minute/week",
+      "source_column": "lifestyle.activity.equivalent_minutes_per_week"
+    },
+    {
+      "metric_code": "lifestyle.activity.MET_minutes_per_week",
+      "unit": "MET-min/week",
+      "source_column": "lifestyle.activity.MET_minutes_per_week"
+    },
+    {
+      "metric_code": "lifestyle.activity.sedentary_minutes_per_day",
+      "unit": "minute/day",
+      "source_column": "lifestyle.activity.sedentary_minutes_per_day"
+    },
+    {
+      "metric_code": "lifestyle.diet.energy_kcal",
+      "unit": "kcal/day",
+      "source_column": "lifestyle.diet.energy_kcal"
+    },
+    {
+      "metric_code": "lifestyle.diet.protein_g",
+      "unit": "g/day",
+      "source_column": "lifestyle.diet.protein_g"
+    },
+    {
+      "metric_code": "lifestyle.diet.carbohydrate_g",
+      "unit": "g/day",
+      "source_column": "lifestyle.diet.carbohydrate_g"
+    },
+    {
+      "metric_code": "lifestyle.diet.total_fat_g",
+      "unit": "g/day",
+      "source_column": "lifestyle.diet.total_fat_g"
+    },
+    {
+      "metric_code": "lifestyle.diet.fiber_g",
+      "unit": "g/day",
+      "source_column": "lifestyle.diet.fiber_g"
+    },
+    {
+      "metric_code": "lifestyle.diet.total_sugar_g",
+      "unit": "g/day",
+      "source_column": "lifestyle.diet.total_sugar_g"
+    },
+    {
+      "metric_code": "lifestyle.diet.sodium_mg",
+      "unit": "mg/day",
+      "source_column": "lifestyle.diet.sodium_mg"
+    }
+  ],
+  "strata": [
+    {
+      "age_band": "18-29",
+      "age_min": 18,
+      "age_max": 29,
+      "gender": "female",
+      "records": 1217,
+      "metrics": {
+        "demographic.age": {
+          "observed": 1217,
+          "missing": 0,
+          "mean": 23.3213,
+          "stddev": 3.6353,
+          "min": 18.0,
+          "p25": 20.0,
+          "median": 23.0,
+          "p75": 27.0,
+          "max": 29.0
+        },
+        "body.height_cm": {
+          "observed": 1142,
+          "missing": 75,
+          "mean": 161.3855,
+          "stddev": 6.8227,
+          "min": 140.3,
+          "p25": 156.8,
+          "median": 161.5,
+          "p75": 166.1,
+          "max": 185.2
+        },
+        "body.weight_kg": {
+          "observed": 1142,
+          "missing": 75,
+          "mean": 73.6384,
+          "stddev": 22.5669,
+          "min": 36.2,
+          "p25": 57.1,
+          "median": 68.4,
+          "p75": 85.5,
+          "max": 200.9
+        },
+        "body.BMI_kg_m2": {
+          "observed": 1136,
+          "missing": 81,
+          "mean": 28.021,
+          "stddev": 7.7672,
+          "min": 14.8,
+          "p25": 21.9,
+          "median": 26.25,
+          "p75": 32.8,
+          "max": 59.7
+        },
+        "body.waist_cm": {
+          "observed": 1086,
+          "missing": 131,
+          "mean": 91.4685,
+          "stddev": 18.1128,
+          "min": 56.4,
+          "p25": 77.0,
+          "median": 88.45,
+          "p75": 102.7,
+          "max": 171.6
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 1065,
+          "missing": 152,
+          "mean": 108.7941,
+          "stddev": 10.1943,
+          "min": 80.3333,
+          "p25": 102.0,
+          "median": 107.3333,
+          "p75": 114.6667,
+          "max": 151.0
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 1064,
+          "missing": 153,
+          "mean": 66.1366,
+          "stddev": 9.3092,
+          "min": 36.0,
+          "p25": 60.3333,
+          "median": 65.8333,
+          "p75": 72.0,
+          "max": 108.3333
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 489,
+          "missing": 728,
+          "mean": 5.3542,
+          "stddev": 1.1407,
+          "min": 3.44,
+          "p25": 4.94,
+          "median": 5.22,
+          "p75": 5.55,
+          "max": 21.6
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 481,
+          "missing": 736,
+          "mean": 14.5725,
+          "stddev": 20.1176,
+          "min": 1.38,
+          "p25": 6.43,
+          "median": 9.86,
+          "p75": 15.56,
+          "max": 256.88
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 449,
+          "missing": 768,
+          "mean": 3.3472,
+          "stddev": 4.6165,
+          "min": 0.2791,
+          "p25": 1.4566,
+          "median": 2.2169,
+          "p75": 3.6647,
+          "max": 72.8398
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 1072,
+          "missing": 145,
+          "mean": 5.268,
+          "stddev": 0.5796,
+          "min": 3.8,
+          "p25": 5.0,
+          "median": 5.2,
+          "p75": 5.4,
+          "max": 14.4
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 462,
+          "missing": 755,
+          "mean": 2.532,
+          "stddev": 0.7719,
+          "min": 0.595,
+          "p25": 1.991,
+          "median": 2.457,
+          "p75": 2.948,
+          "max": 6.336
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 1063,
+          "missing": 154,
+          "mean": 1.4779,
+          "stddev": 0.3991,
+          "min": 0.41,
+          "p25": 1.22,
+          "median": 1.42,
+          "p75": 1.71,
+          "max": 4.89
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 463,
+          "missing": 754,
+          "mean": 0.8732,
+          "stddev": 0.608,
+          "min": 0.169,
+          "p25": 0.497,
+          "median": 0.711,
+          "p75": 1.0555,
+          "max": 5.205
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 1216,
+          "missing": 1,
+          "mean": 8.2583,
+          "stddev": 1.5379,
+          "min": 2.4286,
+          "p25": 7.3571,
+          "median": 8.0357,
+          "p75": 9.0,
+          "max": 14.0
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 1217,
+          "missing": 0,
+          "mean": 822.5604,
+          "stddev": 1098.5113,
+          "min": 0.0,
+          "p25": 90.0,
+          "median": 360.0,
+          "p75": 1140.0,
+          "max": 7500.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 1217,
+          "missing": 0,
+          "mean": 1079.0164,
+          "stddev": 1528.9371,
+          "min": 0.0,
+          "p25": 90.0,
+          "median": 480.0,
+          "p75": 1420.0,
+          "max": 11400.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 1217,
+          "missing": 0,
+          "mean": 4316.0657,
+          "stddev": 6115.7482,
+          "min": 0.0,
+          "p25": 360.0,
+          "median": 1920.0,
+          "p75": 5680.0,
+          "max": 45600.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 1209,
+          "missing": 8,
+          "mean": 368.7767,
+          "stddev": 190.1296,
+          "min": 2.0,
+          "p25": 240.0,
+          "median": 360.0,
+          "p75": 480.0,
+          "max": 1080.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 1044,
+          "missing": 173,
+          "mean": 1949.1619,
+          "stddev": 860.7149,
+          "min": 122.0,
+          "p25": 1357.5,
+          "median": 1822.0,
+          "p75": 2373.0,
+          "max": 7624.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 1044,
+          "missing": 173,
+          "mean": 71.6398,
+          "stddev": 35.8958,
+          "min": 1.82,
+          "p25": 47.9175,
+          "median": 65.325,
+          "p75": 90.8475,
+          "max": 287.12
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 1044,
+          "missing": 173,
+          "mean": 234.5399,
+          "stddev": 111.9529,
+          "min": 15.66,
+          "p25": 152.415,
+          "median": 215.69,
+          "p75": 297.0875,
+          "max": 931.91
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 1044,
+          "missing": 173,
+          "mean": 78.7386,
+          "stddev": 42.0966,
+          "min": 2.86,
+          "p25": 49.2525,
+          "median": 73.31,
+          "p75": 99.855,
+          "max": 340.98
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 1044,
+          "missing": 173,
+          "mean": 14.8398,
+          "stddev": 9.6112,
+          "min": 0.0,
+          "p25": 8.5,
+          "median": 12.9,
+          "p75": 18.4,
+          "max": 107.8
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 1044,
+          "missing": 173,
+          "mean": 101.9305,
+          "stddev": 66.3568,
+          "min": 1.53,
+          "p25": 54.495,
+          "median": 88.05,
+          "p75": 134.015,
+          "max": 483.87
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 1044,
+          "missing": 173,
+          "mean": 3277.659,
+          "stddev": 1657.9233,
+          "min": 240.0,
+          "p25": 2129.5,
+          "median": 3058.0,
+          "p75": 4045.5,
+          "max": 16570.0
+        }
+      }
+    },
+    {
+      "age_band": "18-29",
+      "age_min": 18,
+      "age_max": 29,
+      "gender": "male",
+      "records": 1145,
+      "metrics": {
+        "demographic.age": {
+          "observed": 1145,
+          "missing": 0,
+          "mean": 23.1563,
+          "stddev": 3.6087,
+          "min": 18.0,
+          "p25": 20.0,
+          "median": 23.0,
+          "p75": 26.0,
+          "max": 29.0
+        },
+        "body.height_cm": {
+          "observed": 1067,
+          "missing": 78,
+          "mean": 174.6167,
+          "stddev": 7.3367,
+          "min": 136.5,
+          "p25": 169.9,
+          "median": 174.8,
+          "p75": 179.4,
+          "max": 198.4
+        },
+        "body.weight_kg": {
+          "observed": 1067,
+          "missing": 78,
+          "mean": 83.3243,
+          "stddev": 21.8023,
+          "min": 39.2,
+          "p25": 67.9,
+          "median": 78.9,
+          "p75": 94.2,
+          "max": 191.3
+        },
+        "body.BMI_kg_m2": {
+          "observed": 1065,
+          "missing": 80,
+          "mean": 27.2405,
+          "stddev": 6.6646,
+          "min": 15.6,
+          "p25": 22.4,
+          "median": 25.8,
+          "p75": 30.8,
+          "max": 58.0
+        },
+        "body.waist_cm": {
+          "observed": 1042,
+          "missing": 103,
+          "mean": 92.3562,
+          "stddev": 17.1027,
+          "min": 62.3,
+          "p25": 79.5,
+          "median": 89.15,
+          "p75": 102.0,
+          "max": 160.5
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 991,
+          "missing": 154,
+          "mean": 118.1752,
+          "stddev": 10.5599,
+          "min": 86.6667,
+          "p25": 111.3333,
+          "median": 118.0,
+          "p75": 124.6667,
+          "max": 163.3333
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 989,
+          "missing": 156,
+          "mean": 67.9786,
+          "stddev": 10.1292,
+          "min": 36.6667,
+          "p25": 62.0,
+          "median": 68.0,
+          "p75": 74.6667,
+          "max": 109.6667
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 468,
+          "missing": 677,
+          "mean": 5.5224,
+          "stddev": 0.7948,
+          "min": 3.89,
+          "p25": 5.16,
+          "median": 5.44,
+          "p75": 5.77,
+          "max": 14.8
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 461,
+          "missing": 684,
+          "mean": 13.1107,
+          "stddev": 14.8272,
+          "min": 1.24,
+          "p25": 5.35,
+          "median": 8.79,
+          "p75": 14.37,
+          "max": 131.22
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 428,
+          "missing": 717,
+          "mean": 3.3279,
+          "stddev": 4.7588,
+          "min": 0.2783,
+          "p25": 1.2456,
+          "median": 2.0717,
+          "p75": 3.5533,
+          "max": 53.0712
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 1009,
+          "missing": 136,
+          "mean": 5.2867,
+          "stddev": 0.4994,
+          "min": 4.1,
+          "p25": 5.1,
+          "median": 5.3,
+          "p75": 5.5,
+          "max": 11.7
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 446,
+          "missing": 699,
+          "mean": 2.6373,
+          "stddev": 0.817,
+          "min": 0.621,
+          "p25": 2.069,
+          "median": 2.534,
+          "p75": 3.0965,
+          "max": 5.586
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 997,
+          "missing": 148,
+          "mean": 1.2763,
+          "stddev": 0.337,
+          "min": 0.26,
+          "p25": 1.06,
+          "median": 1.24,
+          "p75": 1.47,
+          "max": 2.87
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 449,
+          "missing": 696,
+          "mean": 1.0543,
+          "stddev": 0.7654,
+          "min": 0.192,
+          "p25": 0.576,
+          "median": 0.881,
+          "p75": 1.298,
+          "max": 8.388
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 1142,
+          "missing": 3,
+          "mean": 7.9705,
+          "stddev": 1.5084,
+          "min": 3.0,
+          "p25": 7.0,
+          "median": 8.0,
+          "p75": 9.0,
+          "max": 14.5
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 1144,
+          "missing": 1,
+          "mean": 1297.2552,
+          "stddev": 1438.475,
+          "min": 0.0,
+          "p25": 250.0,
+          "median": 780.0,
+          "p75": 1897.5,
+          "max": 9720.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 1144,
+          "missing": 1,
+          "mean": 1882.4082,
+          "stddev": 2171.8147,
+          "min": 0.0,
+          "p25": 360.0,
+          "median": 1080.0,
+          "p75": 2540.0,
+          "max": 14580.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 1144,
+          "missing": 1,
+          "mean": 7529.6329,
+          "stddev": 8687.2589,
+          "min": 0.0,
+          "p25": 1440.0,
+          "median": 4320.0,
+          "p75": 10160.0,
+          "max": 58320.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 1140,
+          "missing": 5,
+          "mean": 358.5754,
+          "stddev": 192.0377,
+          "min": 5.0,
+          "p25": 240.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1080.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 974,
+          "missing": 171,
+          "mean": 2514.3018,
+          "stddev": 1261.0572,
+          "min": 88.0,
+          "p25": 1645.0,
+          "median": 2332.5,
+          "p75": 3110.0,
+          "max": 12501.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 974,
+          "missing": 171,
+          "mean": 98.3154,
+          "stddev": 55.6468,
+          "min": 0.0,
+          "p25": 61.2125,
+          "median": 88.66,
+          "p75": 121.5875,
+          "max": 440.73
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 974,
+          "missing": 171,
+          "mean": 292.6283,
+          "stddev": 153.4925,
+          "min": 16.79,
+          "p25": 186.1275,
+          "median": 268.99,
+          "p75": 362.08,
+          "max": 1476.76
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 974,
+          "missing": 171,
+          "mean": 98.5248,
+          "stddev": 60.8413,
+          "min": 0.5,
+          "p25": 57.3425,
+          "median": 88.65,
+          "p75": 124.51,
+          "max": 567.96
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 974,
+          "missing": 171,
+          "mean": 17.4888,
+          "stddev": 12.3768,
+          "min": 0.0,
+          "p25": 9.0,
+          "median": 14.6,
+          "p75": 22.6,
+          "max": 107.6
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 974,
+          "missing": 171,
+          "mean": 121.1105,
+          "stddev": 85.5511,
+          "min": 0.67,
+          "p25": 61.2675,
+          "median": 104.405,
+          "p75": 159.59,
+          "max": 600.79
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 974,
+          "missing": 171,
+          "mean": 4272.8737,
+          "stddev": 2332.2423,
+          "min": 22.0,
+          "p25": 2732.5,
+          "median": 3852.0,
+          "p75": 5372.0,
+          "max": 20799.0
+        }
+      }
+    },
+    {
+      "age_band": "30-39",
+      "age_min": 30,
+      "age_max": 39,
+      "gender": "female",
+      "records": 969,
+      "metrics": {
+        "demographic.age": {
+          "observed": 969,
+          "missing": 0,
+          "mean": 34.4252,
+          "stddev": 2.8853,
+          "min": 30.0,
+          "p25": 32.0,
+          "median": 34.0,
+          "p75": 37.0,
+          "max": 39.0
+        },
+        "body.height_cm": {
+          "observed": 922,
+          "missing": 47,
+          "mean": 161.255,
+          "stddev": 6.9014,
+          "min": 139.9,
+          "p25": 156.4,
+          "median": 161.2,
+          "p75": 165.8,
+          "max": 182.6
+        },
+        "body.weight_kg": {
+          "observed": 923,
+          "missing": 46,
+          "mean": 78.5523,
+          "stddev": 23.5982,
+          "min": 39.6,
+          "p25": 61.95,
+          "median": 72.8,
+          "p75": 90.8,
+          "max": 179.2
+        },
+        "body.BMI_kg_m2": {
+          "observed": 917,
+          "missing": 52,
+          "mean": 29.9051,
+          "stddev": 7.9865,
+          "min": 15.7,
+          "p25": 24.0,
+          "median": 28.4,
+          "p75": 34.4,
+          "max": 59.4
+        },
+        "body.waist_cm": {
+          "observed": 866,
+          "missing": 103,
+          "mean": 97.347,
+          "stddev": 18.5546,
+          "min": 63.2,
+          "p25": 83.5,
+          "median": 94.75,
+          "p75": 107.8,
+          "max": 166.0
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 815,
+          "missing": 154,
+          "mean": 112.0675,
+          "stddev": 12.7651,
+          "min": 84.6667,
+          "p25": 103.6667,
+          "median": 110.6667,
+          "p75": 118.6667,
+          "max": 182.6667
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 814,
+          "missing": 155,
+          "mean": 70.5033,
+          "stddev": 10.6638,
+          "min": 42.0,
+          "p25": 63.3333,
+          "median": 69.3333,
+          "p75": 76.6667,
+          "max": 119.0
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 420,
+          "missing": 549,
+          "mean": 5.6325,
+          "stddev": 1.3172,
+          "min": 4.11,
+          "p25": 5.05,
+          "median": 5.35,
+          "p75": 5.77,
+          "max": 16.0
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 414,
+          "missing": 555,
+          "mean": 11.9111,
+          "stddev": 10.5774,
+          "min": 1.48,
+          "p25": 5.5925,
+          "median": 8.995,
+          "p75": 14.39,
+          "max": 97.23
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 380,
+          "missing": 589,
+          "mean": 2.9867,
+          "stddev": 2.9197,
+          "min": 0.3249,
+          "p25": 1.2879,
+          "median": 2.0862,
+          "p75": 3.4144,
+          "max": 29.9236
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 871,
+          "missing": 98,
+          "mean": 5.431,
+          "stddev": 0.7002,
+          "min": 4.0,
+          "p25": 5.1,
+          "median": 5.3,
+          "p75": 5.6,
+          "max": 11.5
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 397,
+          "missing": 572,
+          "mean": 2.7174,
+          "stddev": 0.7983,
+          "min": 0.828,
+          "p25": 2.146,
+          "median": 2.638,
+          "p75": 3.129,
+          "max": 5.793
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 868,
+          "missing": 101,
+          "mean": 1.4636,
+          "stddev": 0.4146,
+          "min": 0.59,
+          "p25": 1.16,
+          "median": 1.4,
+          "p75": 1.71,
+          "max": 3.34
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 398,
+          "missing": 571,
+          "mean": 1.0219,
+          "stddev": 0.7225,
+          "min": 0.113,
+          "p25": 0.5677,
+          "median": 0.79,
+          "p75": 1.231,
+          "max": 7.271
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 964,
+          "missing": 5,
+          "mean": 7.765,
+          "stddev": 1.386,
+          "min": 3.5,
+          "p25": 7.0,
+          "median": 7.9286,
+          "p75": 8.5,
+          "max": 13.2857
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 969,
+          "missing": 0,
+          "mean": 707.4324,
+          "stddev": 1143.0738,
+          "min": 0.0,
+          "p25": 20.0,
+          "median": 240.0,
+          "p75": 780.0,
+          "max": 7260.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 969,
+          "missing": 0,
+          "mean": 923.1672,
+          "stddev": 1608.4423,
+          "min": 0.0,
+          "p25": 20.0,
+          "median": 300.0,
+          "p75": 1000.0,
+          "max": 10800.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 969,
+          "missing": 0,
+          "mean": 3692.6687,
+          "stddev": 6433.7693,
+          "min": 0.0,
+          "p25": 80.0,
+          "median": 1200.0,
+          "p75": 4000.0,
+          "max": 43200.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 963,
+          "missing": 6,
+          "mean": 335.2451,
+          "stddev": 196.4263,
+          "min": 1.0,
+          "p25": 180.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1080.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 842,
+          "missing": 127,
+          "mean": 1900.1746,
+          "stddev": 818.5189,
+          "min": 0.0,
+          "p25": 1323.75,
+          "median": 1812.0,
+          "p75": 2288.75,
+          "max": 5789.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 842,
+          "missing": 127,
+          "mean": 71.7934,
+          "stddev": 34.7433,
+          "min": 0.0,
+          "p25": 47.56,
+          "median": 67.485,
+          "p75": 90.7175,
+          "max": 234.97
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 842,
+          "missing": 127,
+          "mean": 226.5774,
+          "stddev": 105.0586,
+          "min": 0.0,
+          "p25": 155.5225,
+          "median": 213.015,
+          "p75": 278.1,
+          "max": 757.99
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 842,
+          "missing": 127,
+          "mean": 75.9038,
+          "stddev": 42.3914,
+          "min": 0.0,
+          "p25": 45.3025,
+          "median": 68.19,
+          "p75": 97.3975,
+          "max": 323.59
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 842,
+          "missing": 127,
+          "mean": 15.857,
+          "stddev": 9.9929,
+          "min": 0.0,
+          "p25": 8.8,
+          "median": 13.8,
+          "p75": 20.8,
+          "max": 72.0
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 842,
+          "missing": 127,
+          "mean": 97.2594,
+          "stddev": 62.8255,
+          "min": 0.0,
+          "p25": 52.76,
+          "median": 84.555,
+          "p75": 126.1875,
+          "max": 477.94
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 842,
+          "missing": 127,
+          "mean": 3225.6983,
+          "stddev": 1676.6891,
+          "min": 0.0,
+          "p25": 2081.5,
+          "median": 3008.0,
+          "p75": 3921.25,
+          "max": 13753.0
+        }
+      }
+    },
+    {
+      "age_band": "30-39",
+      "age_min": 30,
+      "age_max": 39,
+      "gender": "male",
+      "records": 869,
+      "metrics": {
+        "demographic.age": {
+          "observed": 869,
+          "missing": 0,
+          "mean": 34.3786,
+          "stddev": 2.7652,
+          "min": 30.0,
+          "p25": 32.0,
+          "median": 34.0,
+          "p75": 37.0,
+          "max": 39.0
+        },
+        "body.height_cm": {
+          "observed": 805,
+          "missing": 64,
+          "mean": 174.7062,
+          "stddev": 7.6815,
+          "min": 149.6,
+          "p25": 169.5,
+          "median": 174.8,
+          "p75": 179.7,
+          "max": 195.8
+        },
+        "body.weight_kg": {
+          "observed": 804,
+          "missing": 65,
+          "mean": 92.0312,
+          "stddev": 24.4842,
+          "min": 46.9,
+          "p25": 75.275,
+          "median": 86.3,
+          "p75": 102.725,
+          "max": 242.6
+        },
+        "body.BMI_kg_m2": {
+          "observed": 800,
+          "missing": 69,
+          "mean": 29.8777,
+          "stddev": 6.8307,
+          "min": 15.5,
+          "p25": 25.1,
+          "median": 28.7,
+          "p75": 33.4,
+          "max": 58.8
+        },
+        "body.waist_cm": {
+          "observed": 777,
+          "missing": 92,
+          "mean": 101.2411,
+          "stddev": 16.8397,
+          "min": 67.2,
+          "p25": 89.3,
+          "median": 98.9,
+          "p75": 110.1,
+          "max": 161.6
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 765,
+          "missing": 104,
+          "mean": 122.2218,
+          "stddev": 13.2952,
+          "min": 95.3333,
+          "p25": 113.0,
+          "median": 120.6667,
+          "p75": 128.6667,
+          "max": 186.6667
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 765,
+          "missing": 104,
+          "mean": 75.68,
+          "stddev": 11.1633,
+          "min": 45.3333,
+          "p25": 68.0,
+          "median": 75.0,
+          "p75": 82.0,
+          "max": 138.6667
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 360,
+          "missing": 509,
+          "mean": 5.9089,
+          "stddev": 1.7649,
+          "min": 3.89,
+          "p25": 5.27,
+          "median": 5.61,
+          "p75": 5.9525,
+          "max": 20.5
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 354,
+          "missing": 515,
+          "mean": 13.88,
+          "stddev": 15.4566,
+          "min": 1.26,
+          "p25": 6.0075,
+          "median": 9.205,
+          "p75": 15.7975,
+          "max": 154.48
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 325,
+          "missing": 544,
+          "mean": 3.8446,
+          "stddev": 7.2728,
+          "min": 0.2862,
+          "p25": 1.4548,
+          "median": 2.3048,
+          "p75": 3.9479,
+          "max": 109.8524
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 767,
+          "missing": 102,
+          "mean": 5.5482,
+          "stddev": 0.9953,
+          "min": 4.2,
+          "p25": 5.2,
+          "median": 5.4,
+          "p75": 5.7,
+          "max": 15.6
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 327,
+          "missing": 542,
+          "mean": 3.1531,
+          "stddev": 0.8383,
+          "min": 0.672,
+          "p25": 2.508,
+          "median": 3.129,
+          "p75": 3.698,
+          "max": 6.413
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 763,
+          "missing": 106,
+          "mean": 1.2069,
+          "stddev": 0.3717,
+          "min": 0.28,
+          "p25": 0.96,
+          "median": 1.14,
+          "p75": 1.37,
+          "max": 4.29
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 334,
+          "missing": 535,
+          "mean": 1.5606,
+          "stddev": 1.5156,
+          "min": 0.237,
+          "p25": 0.779,
+          "median": 1.2365,
+          "p75": 1.8095,
+          "max": 19.882
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 865,
+          "missing": 4,
+          "mean": 7.4457,
+          "stddev": 1.5047,
+          "min": 3.0,
+          "p25": 6.5,
+          "median": 7.5,
+          "p75": 8.2857,
+          "max": 14.0
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 868,
+          "missing": 1,
+          "mean": 1248.1221,
+          "stddev": 1507.5811,
+          "min": 0.0,
+          "p25": 120.0,
+          "median": 570.0,
+          "p75": 2040.0,
+          "max": 8280.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 868,
+          "missing": 1,
+          "mean": 1785.0749,
+          "stddev": 2275.1196,
+          "min": 0.0,
+          "p25": 180.0,
+          "median": 810.0,
+          "p75": 2640.0,
+          "max": 12960.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 868,
+          "missing": 1,
+          "mean": 7140.2995,
+          "stddev": 9100.4782,
+          "min": 0.0,
+          "p25": 720.0,
+          "median": 3240.0,
+          "p75": 10560.0,
+          "max": 51840.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 862,
+          "missing": 7,
+          "mean": 340.9745,
+          "stddev": 209.7993,
+          "min": 10.0,
+          "p25": 180.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1200.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 747,
+          "missing": 122,
+          "mean": 2662.7349,
+          "stddev": 1194.9485,
+          "min": 124.0,
+          "p25": 1864.0,
+          "median": 2470.0,
+          "p75": 3226.0,
+          "max": 10477.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 747,
+          "missing": 122,
+          "mean": 102.1937,
+          "stddev": 53.1546,
+          "min": 1.64,
+          "p25": 65.225,
+          "median": 92.47,
+          "p75": 126.54,
+          "max": 371.03
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 747,
+          "missing": 122,
+          "mean": 307.3944,
+          "stddev": 151.2581,
+          "min": 12.31,
+          "p25": 207.375,
+          "median": 281.65,
+          "p75": 375.02,
+          "max": 1336.27
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 747,
+          "missing": 122,
+          "mean": 102.8977,
+          "stddev": 56.4571,
+          "min": 1.95,
+          "p25": 65.865,
+          "median": 93.27,
+          "p75": 129.44,
+          "max": 410.11
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 747,
+          "missing": 122,
+          "mean": 19.2126,
+          "stddev": 11.8851,
+          "min": 0.0,
+          "p25": 11.0,
+          "median": 16.5,
+          "p75": 25.15,
+          "max": 74.0
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 747,
+          "missing": 122,
+          "mean": 131.2573,
+          "stddev": 98.469,
+          "min": 0.33,
+          "p25": 64.305,
+          "median": 111.29,
+          "p75": 167.89,
+          "max": 931.16
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 747,
+          "missing": 122,
+          "mean": 4420.7483,
+          "stddev": 2188.9202,
+          "min": 113.0,
+          "p25": 2901.5,
+          "median": 4000.0,
+          "p75": 5538.0,
+          "max": 14400.0
+        }
+      }
+    },
+    {
+      "age_band": "40-49",
+      "age_min": 40,
+      "age_max": 49,
+      "gender": "female",
+      "records": 958,
+      "metrics": {
+        "demographic.age": {
+          "observed": 958,
+          "missing": 0,
+          "mean": 44.4217,
+          "stddev": 2.8039,
+          "min": 40.0,
+          "p25": 42.0,
+          "median": 44.0,
+          "p75": 47.0,
+          "max": 49.0
+        },
+        "body.height_cm": {
+          "observed": 909,
+          "missing": 49,
+          "mean": 160.6437,
+          "stddev": 7.125,
+          "min": 137.6,
+          "p25": 155.6,
+          "median": 160.9,
+          "p75": 165.5,
+          "max": 189.3
+        },
+        "body.weight_kg": {
+          "observed": 908,
+          "missing": 50,
+          "mean": 80.8192,
+          "stddev": 22.7204,
+          "min": 42.2,
+          "p25": 63.475,
+          "median": 76.45,
+          "p75": 93.55,
+          "max": 178.9
+        },
+        "body.BMI_kg_m2": {
+          "observed": 903,
+          "missing": 55,
+          "mean": 31.0627,
+          "stddev": 7.8064,
+          "min": 18.1,
+          "p25": 24.85,
+          "median": 29.6,
+          "p75": 35.6,
+          "max": 57.7
+        },
+        "body.waist_cm": {
+          "observed": 858,
+          "missing": 100,
+          "mean": 100.0751,
+          "stddev": 17.4813,
+          "min": 68.7,
+          "p25": 86.8,
+          "median": 98.0,
+          "p75": 110.4,
+          "max": 169.6
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 841,
+          "missing": 117,
+          "mean": 119.4629,
+          "stddev": 15.8852,
+          "min": 76.3333,
+          "p25": 108.6667,
+          "median": 117.3333,
+          "p75": 127.6667,
+          "max": 209.3333
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 841,
+          "missing": 117,
+          "mean": 74.6599,
+          "stddev": 10.9853,
+          "min": 40.6667,
+          "p25": 67.3333,
+          "median": 74.0,
+          "p75": 81.0,
+          "max": 126.0
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 398,
+          "missing": 560,
+          "mean": 6.0891,
+          "stddev": 1.9407,
+          "min": 4.27,
+          "p25": 5.255,
+          "median": 5.61,
+          "p75": 6.05,
+          "max": 18.4
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 391,
+          "missing": 567,
+          "mean": 14.6302,
+          "stddev": 15.9726,
+          "min": 1.33,
+          "p25": 6.395,
+          "median": 10.13,
+          "p75": 18.115,
+          "max": 207.32
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 369,
+          "missing": 589,
+          "mean": 4.095,
+          "stddev": 5.5061,
+          "min": 0.2885,
+          "p25": 1.5498,
+          "median": 2.4747,
+          "p75": 4.8739,
+          "max": 64.6378
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 878,
+          "missing": 80,
+          "mean": 5.7391,
+          "stddev": 1.0837,
+          "min": 4.1,
+          "p25": 5.3,
+          "median": 5.5,
+          "p75": 5.8,
+          "max": 15.0
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 377,
+          "missing": 581,
+          "mean": 2.9811,
+          "stddev": 0.7946,
+          "min": 1.034,
+          "p25": 2.379,
+          "median": 2.922,
+          "p75": 3.465,
+          "max": 6.181
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 867,
+          "missing": 91,
+          "mean": 1.4653,
+          "stddev": 0.4316,
+          "min": 0.59,
+          "p25": 1.16,
+          "median": 1.4,
+          "p75": 1.71,
+          "max": 4.6
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 382,
+          "missing": 576,
+          "mean": 1.1716,
+          "stddev": 0.8658,
+          "min": 0.26,
+          "p25": 0.68,
+          "median": 0.96,
+          "p75": 1.3742,
+          "max": 9.845
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 953,
+          "missing": 5,
+          "mean": 7.6659,
+          "stddev": 1.4081,
+          "min": 3.0,
+          "p25": 7.0,
+          "median": 7.6429,
+          "p75": 8.5,
+          "max": 14.0
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 958,
+          "missing": 0,
+          "mean": 580.2912,
+          "stddev": 963.12,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 180.0,
+          "p75": 670.0,
+          "max": 6300.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 958,
+          "missing": 0,
+          "mean": 751.4186,
+          "stddev": 1342.9441,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 185.0,
+          "p75": 870.0,
+          "max": 10080.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 958,
+          "missing": 0,
+          "mean": 3005.6743,
+          "stddev": 5371.7763,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 740.0,
+          "p75": 3480.0,
+          "max": 40320.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 949,
+          "missing": 9,
+          "mean": 348.9684,
+          "stddev": 215.283,
+          "min": 5.0,
+          "p25": 180.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1080.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 827,
+          "missing": 131,
+          "mean": 1891.1705,
+          "stddev": 824.3475,
+          "min": 85.0,
+          "p25": 1341.5,
+          "median": 1810.0,
+          "p75": 2320.5,
+          "max": 7463.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 827,
+          "missing": 131,
+          "mean": 71.9119,
+          "stddev": 36.6768,
+          "min": 0.2,
+          "p25": 47.28,
+          "median": 65.74,
+          "p75": 91.05,
+          "max": 316.91
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 827,
+          "missing": 131,
+          "mean": 226.7816,
+          "stddev": 103.1832,
+          "min": 12.97,
+          "p25": 157.955,
+          "median": 214.59,
+          "p75": 277.865,
+          "max": 895.42
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 827,
+          "missing": 131,
+          "mean": 75.1022,
+          "stddev": 43.045,
+          "min": 0.21,
+          "p25": 45.88,
+          "median": 68.2,
+          "p75": 95.465,
+          "max": 379.62
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 827,
+          "missing": 131,
+          "mean": 15.6156,
+          "stddev": 9.9969,
+          "min": 0.0,
+          "p25": 8.65,
+          "median": 13.8,
+          "p75": 20.0,
+          "max": 74.4
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 827,
+          "missing": 131,
+          "mean": 101.2066,
+          "stddev": 64.4511,
+          "min": 3.18,
+          "p25": 57.07,
+          "median": 88.38,
+          "p75": 131.075,
+          "max": 492.97
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 827,
+          "missing": 131,
+          "mean": 3131.6505,
+          "stddev": 1674.4378,
+          "min": 23.0,
+          "p25": 1998.0,
+          "median": 2838.0,
+          "p75": 3911.5,
+          "max": 14473.0
+        }
+      }
+    },
+    {
+      "age_band": "40-49",
+      "age_min": 40,
+      "age_max": 49,
+      "gender": "male",
+      "records": 796,
+      "metrics": {
+        "demographic.age": {
+          "observed": 796,
+          "missing": 0,
+          "mean": 44.4435,
+          "stddev": 2.8704,
+          "min": 40.0,
+          "p25": 42.0,
+          "median": 45.0,
+          "p75": 47.0,
+          "max": 49.0
+        },
+        "body.height_cm": {
+          "observed": 767,
+          "missing": 29,
+          "mean": 174.4362,
+          "stddev": 7.7922,
+          "min": 150.7,
+          "p25": 169.0,
+          "median": 174.8,
+          "p75": 180.0,
+          "max": 202.7
+        },
+        "body.weight_kg": {
+          "observed": 766,
+          "missing": 30,
+          "mean": 91.985,
+          "stddev": 22.0813,
+          "min": 46.2,
+          "p25": 76.725,
+          "median": 88.15,
+          "p75": 103.05,
+          "max": 180.8
+        },
+        "body.BMI_kg_m2": {
+          "observed": 765,
+          "missing": 31,
+          "mean": 30.109,
+          "stddev": 6.3069,
+          "min": 15.1,
+          "p25": 25.8,
+          "median": 29.0,
+          "p75": 33.2,
+          "max": 58.0
+        },
+        "body.waist_cm": {
+          "observed": 741,
+          "missing": 55,
+          "mean": 103.3981,
+          "stddev": 16.1149,
+          "min": 68.2,
+          "p25": 92.6,
+          "median": 101.7,
+          "p75": 111.8,
+          "max": 162.7
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 730,
+          "missing": 66,
+          "mean": 125.1865,
+          "stddev": 15.4788,
+          "min": 83.3333,
+          "p25": 114.6667,
+          "median": 123.1667,
+          "p75": 133.3333,
+          "max": 209.3333
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 730,
+          "missing": 66,
+          "mean": 78.7034,
+          "stddev": 11.3482,
+          "min": 46.6667,
+          "p25": 71.6667,
+          "median": 78.0,
+          "p75": 85.3333,
+          "max": 135.0
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 352,
+          "missing": 444,
+          "mean": 6.4231,
+          "stddev": 2.4414,
+          "min": 1.17,
+          "p25": 5.485,
+          "median": 5.83,
+          "p75": 6.33,
+          "max": 25.2
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 344,
+          "missing": 452,
+          "mean": 15.4147,
+          "stddev": 21.9219,
+          "min": 1.33,
+          "p25": 6.4075,
+          "median": 9.87,
+          "p75": 15.53,
+          "max": 267.22
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 329,
+          "missing": 467,
+          "mean": 4.8565,
+          "stddev": 10.3117,
+          "min": 0.2576,
+          "p25": 1.6428,
+          "median": 2.6857,
+          "p75": 4.4083,
+          "max": 154.3938
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 725,
+          "missing": 71,
+          "mean": 5.8799,
+          "stddev": 1.3293,
+          "min": 4.2,
+          "p25": 5.3,
+          "median": 5.6,
+          "p75": 5.9,
+          "max": 16.5
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 328,
+          "missing": 468,
+          "mean": 3.1759,
+          "stddev": 0.8977,
+          "min": 1.19,
+          "p25": 2.508,
+          "median": 3.116,
+          "p75": 3.698,
+          "max": 6.879
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 718,
+          "missing": 78,
+          "mean": 1.1952,
+          "stddev": 0.3331,
+          "min": 0.49,
+          "p25": 0.96,
+          "median": 1.14,
+          "p75": 1.3625,
+          "max": 3.54
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 336,
+          "missing": 460,
+          "mean": 1.5737,
+          "stddev": 1.4209,
+          "min": 0.226,
+          "p25": 0.813,
+          "median": 1.208,
+          "p75": 1.888,
+          "max": 15.885
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 789,
+          "missing": 7,
+          "mean": 7.3542,
+          "stddev": 1.35,
+          "min": 3.0,
+          "p25": 6.5,
+          "median": 7.3571,
+          "p75": 8.0,
+          "max": 14.0
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 796,
+          "missing": 0,
+          "mean": 974.7877,
+          "stddev": 1342.1802,
+          "min": 0.0,
+          "p25": 75.75,
+          "median": 360.0,
+          "p75": 1410.0,
+          "max": 9060.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 796,
+          "missing": 0,
+          "mean": 1368.098,
+          "stddev": 1970.1847,
+          "min": 0.0,
+          "p25": 97.5,
+          "median": 480.0,
+          "p75": 1777.5,
+          "max": 12240.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 796,
+          "missing": 0,
+          "mean": 5472.392,
+          "stddev": 7880.7387,
+          "min": 0.0,
+          "p25": 390.0,
+          "median": 1920.0,
+          "p75": 7110.0,
+          "max": 48960.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 788,
+          "missing": 8,
+          "mean": 368.7995,
+          "stddev": 215.9509,
+          "min": 15.0,
+          "p25": 180.0,
+          "median": 360.0,
+          "p75": 480.0,
+          "max": 1200.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 710,
+          "missing": 86,
+          "mean": 2555.6,
+          "stddev": 1082.7468,
+          "min": 14.0,
+          "p25": 1810.0,
+          "median": 2391.0,
+          "p75": 3136.0,
+          "max": 8177.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 710,
+          "missing": 86,
+          "mean": 99.2588,
+          "stddev": 47.4255,
+          "min": 1.45,
+          "p25": 67.2125,
+          "median": 90.755,
+          "p75": 121.9475,
+          "max": 381.03
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 710,
+          "missing": 86,
+          "mean": 293.179,
+          "stddev": 136.848,
+          "min": 1.0,
+          "p25": 201.715,
+          "median": 274.93,
+          "p75": 357.2575,
+          "max": 1134.08
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 710,
+          "missing": 86,
+          "mean": 99.4639,
+          "stddev": 54.1531,
+          "min": 0.48,
+          "p25": 63.6575,
+          "median": 88.88,
+          "p75": 128.56,
+          "max": 405.22
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 710,
+          "missing": 86,
+          "mean": 19.099,
+          "stddev": 12.2081,
+          "min": 0.0,
+          "p25": 11.2,
+          "median": 16.1,
+          "p75": 24.9,
+          "max": 85.4
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 710,
+          "missing": 86,
+          "mean": 121.4786,
+          "stddev": 87.8271,
+          "min": 0.98,
+          "p25": 64.5875,
+          "median": 103.755,
+          "p75": 154.83,
+          "max": 882.09
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 710,
+          "missing": 86,
+          "mean": 4230.393,
+          "stddev": 2057.0704,
+          "min": 160.0,
+          "p25": 2853.5,
+          "median": 3931.0,
+          "p75": 5294.5,
+          "max": 14210.0
+        }
+      }
+    },
+    {
+      "age_band": "50-59",
+      "age_min": 50,
+      "age_max": 59,
+      "gender": "female",
+      "records": 960,
+      "metrics": {
+        "demographic.age": {
+          "observed": 960,
+          "missing": 0,
+          "mean": 54.4281,
+          "stddev": 2.7517,
+          "min": 50.0,
+          "p25": 52.0,
+          "median": 55.0,
+          "p75": 57.0,
+          "max": 59.0
+        },
+        "body.height_cm": {
+          "observed": 915,
+          "missing": 45,
+          "mean": 159.7208,
+          "stddev": 7.1063,
+          "min": 138.3,
+          "p25": 154.8,
+          "median": 159.7,
+          "p75": 164.4,
+          "max": 187.8
+        },
+        "body.weight_kg": {
+          "observed": 915,
+          "missing": 45,
+          "mean": 78.566,
+          "stddev": 22.0114,
+          "min": 39.4,
+          "p25": 62.75,
+          "median": 74.6,
+          "p75": 90.15,
+          "max": 204.4
+        },
+        "body.BMI_kg_m2": {
+          "observed": 910,
+          "missing": 50,
+          "mean": 30.558,
+          "stddev": 7.7167,
+          "min": 14.5,
+          "p25": 24.8,
+          "median": 29.25,
+          "p75": 34.775,
+          "max": 57.3
+        },
+        "body.waist_cm": {
+          "observed": 884,
+          "missing": 76,
+          "mean": 100.6626,
+          "stddev": 17.2674,
+          "min": 57.9,
+          "p25": 87.675,
+          "median": 98.5,
+          "p75": 110.725,
+          "max": 159.2
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 848,
+          "missing": 112,
+          "mean": 127.6156,
+          "stddev": 18.8898,
+          "min": 83.6667,
+          "p25": 114.5833,
+          "median": 125.3333,
+          "p75": 137.75,
+          "max": 217.3333
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 847,
+          "missing": 113,
+          "mean": 75.5458,
+          "stddev": 11.1515,
+          "min": 33.3333,
+          "p25": 68.0,
+          "median": 75.3333,
+          "p75": 82.6667,
+          "max": 119.3333
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 441,
+          "missing": 519,
+          "mean": 6.4065,
+          "stddev": 2.4187,
+          "min": 2.61,
+          "p25": 5.38,
+          "median": 5.72,
+          "p75": 6.38,
+          "max": 24.6
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 430,
+          "missing": 530,
+          "mean": 13.0843,
+          "stddev": 14.6433,
+          "min": 1.22,
+          "p25": 6.445,
+          "median": 10.295,
+          "p75": 15.3025,
+          "max": 199.9
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 415,
+          "missing": 545,
+          "mean": 3.9605,
+          "stddev": 5.0382,
+          "min": 0.2445,
+          "p25": 1.6843,
+          "median": 2.7696,
+          "p75": 4.4524,
+          "max": 65.7408
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 894,
+          "missing": 66,
+          "mean": 6.0498,
+          "stddev": 1.2358,
+          "min": 4.3,
+          "p25": 5.4,
+          "median": 5.7,
+          "p75": 6.1,
+          "max": 14.1
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 420,
+          "missing": 540,
+          "mean": 3.2231,
+          "stddev": 0.9814,
+          "min": 0.983,
+          "p25": 2.56,
+          "median": 3.181,
+          "p75": 3.8075,
+          "max": 9.154
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 878,
+          "missing": 82,
+          "mean": 1.5434,
+          "stddev": 0.4536,
+          "min": 0.57,
+          "p25": 1.24,
+          "median": 1.47,
+          "p75": 1.78,
+          "max": 3.65
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 426,
+          "missing": 534,
+          "mean": 1.3545,
+          "stddev": 0.9409,
+          "min": 0.271,
+          "p25": 0.768,
+          "median": 1.1345,
+          "p75": 1.682,
+          "max": 9.89
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 952,
+          "missing": 8,
+          "mean": 7.6393,
+          "stddev": 1.4876,
+          "min": 2.0,
+          "p25": 6.9286,
+          "median": 7.6429,
+          "p75": 8.5,
+          "max": 13.0
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 960,
+          "missing": 0,
+          "mean": 527.6042,
+          "stddev": 951.1637,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 152.5,
+          "p75": 540.0,
+          "max": 8400.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 960,
+          "missing": 0,
+          "mean": 685.2635,
+          "stddev": 1350.9083,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 180.0,
+          "p75": 630.0,
+          "max": 11940.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 960,
+          "missing": 0,
+          "mean": 2741.0542,
+          "stddev": 5403.6332,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 720.0,
+          "p75": 2520.0,
+          "max": 47760.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 953,
+          "missing": 7,
+          "mean": 343.3116,
+          "stddev": 204.8928,
+          "min": 3.0,
+          "p25": 180.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1320.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 838,
+          "missing": 122,
+          "mean": 1793.9141,
+          "stddev": 730.7337,
+          "min": 221.0,
+          "p25": 1282.25,
+          "median": 1718.0,
+          "p75": 2212.75,
+          "max": 5256.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 838,
+          "missing": 122,
+          "mean": 67.9419,
+          "stddev": 31.2653,
+          "min": 1.02,
+          "p25": 46.6425,
+          "median": 63.66,
+          "p75": 86.3625,
+          "max": 249.95
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 838,
+          "missing": 122,
+          "mean": 215.2152,
+          "stddev": 97.709,
+          "min": 21.6,
+          "p25": 146.725,
+          "median": 202.65,
+          "p75": 269.4325,
+          "max": 718.89
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 838,
+          "missing": 122,
+          "mean": 71.8885,
+          "stddev": 38.1474,
+          "min": 0.66,
+          "p25": 46.0125,
+          "median": 67.095,
+          "p75": 91.795,
+          "max": 297.32
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 838,
+          "missing": 122,
+          "mean": 15.926,
+          "stddev": 10.036,
+          "min": 0.0,
+          "p25": 8.6,
+          "median": 13.75,
+          "p75": 20.6,
+          "max": 75.3
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 838,
+          "missing": 122,
+          "mean": 92.6981,
+          "stddev": 58.6492,
+          "min": 1.26,
+          "p25": 51.585,
+          "median": 81.83,
+          "p75": 121.0325,
+          "max": 449.1
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 838,
+          "missing": 122,
+          "mean": 2924.1838,
+          "stddev": 1360.4238,
+          "min": 34.0,
+          "p25": 1915.25,
+          "median": 2768.5,
+          "p75": 3727.75,
+          "max": 9885.0
+        }
+      }
+    },
+    {
+      "age_band": "50-59",
+      "age_min": 50,
+      "age_max": 59,
+      "gender": "male",
+      "records": 883,
+      "metrics": {
+        "demographic.age": {
+          "observed": 883,
+          "missing": 0,
+          "mean": 54.5515,
+          "stddev": 2.8596,
+          "min": 50.0,
+          "p25": 52.0,
+          "median": 54.0,
+          "p75": 57.0,
+          "max": 59.0
+        },
+        "body.height_cm": {
+          "observed": 840,
+          "missing": 43,
+          "mean": 173.2875,
+          "stddev": 8.1386,
+          "min": 140.1,
+          "p25": 167.9,
+          "median": 173.2,
+          "p75": 178.9,
+          "max": 195.6
+        },
+        "body.weight_kg": {
+          "observed": 842,
+          "missing": 41,
+          "mean": 88.6635,
+          "stddev": 21.092,
+          "min": 46.2,
+          "p25": 73.95,
+          "median": 84.9,
+          "p75": 100.425,
+          "max": 192.3
+        },
+        "body.BMI_kg_m2": {
+          "observed": 840,
+          "missing": 43,
+          "mean": 29.4008,
+          "stddev": 6.0158,
+          "min": 15.7,
+          "p25": 25.175,
+          "median": 28.7,
+          "p75": 32.6,
+          "max": 57.4
+        },
+        "body.waist_cm": {
+          "observed": 810,
+          "missing": 73,
+          "mean": 103.7002,
+          "stddev": 15.2452,
+          "min": 69.5,
+          "p25": 94.0,
+          "median": 101.4,
+          "p75": 111.95,
+          "max": 164.1
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 791,
+          "missing": 92,
+          "mean": 128.7244,
+          "stddev": 17.5465,
+          "min": 89.0,
+          "p25": 116.6667,
+          "median": 126.6667,
+          "p75": 138.1667,
+          "max": 226.6667
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 789,
+          "missing": 94,
+          "mean": 77.1037,
+          "stddev": 11.1033,
+          "min": 30.6667,
+          "p25": 69.3333,
+          "median": 76.6667,
+          "p75": 84.0,
+          "max": 120.6667
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 396,
+          "missing": 487,
+          "mean": 6.8198,
+          "stddev": 2.7553,
+          "min": 3.83,
+          "p25": 5.5,
+          "median": 5.94,
+          "p75": 6.77,
+          "max": 25.0
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 391,
+          "missing": 492,
+          "mean": 14.8619,
+          "stddev": 17.5373,
+          "min": 0.71,
+          "p25": 6.2,
+          "median": 10.09,
+          "p75": 17.48,
+          "max": 167.28
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 364,
+          "missing": 519,
+          "mean": 5.1303,
+          "stddev": 8.9698,
+          "min": 0.1209,
+          "p25": 1.6732,
+          "median": 2.9435,
+          "p75": 5.2487,
+          "max": 86.2421
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 817,
+          "missing": 66,
+          "mean": 6.0853,
+          "stddev": 1.3049,
+          "min": 4.3,
+          "p25": 5.4,
+          "median": 5.7,
+          "p75": 6.1,
+          "max": 13.7
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 372,
+          "missing": 511,
+          "mean": 2.9928,
+          "stddev": 0.9174,
+          "min": 0.621,
+          "p25": 2.379,
+          "median": 2.948,
+          "p75": 3.6013,
+          "max": 6.0
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 809,
+          "missing": 74,
+          "mean": 1.2669,
+          "stddev": 0.4238,
+          "min": 0.16,
+          "p25": 0.98,
+          "median": 1.19,
+          "p75": 1.45,
+          "max": 3.8
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 380,
+          "missing": 503,
+          "mean": 1.5572,
+          "stddev": 1.2268,
+          "min": 0.248,
+          "p25": 0.813,
+          "median": 1.1965,
+          "p75": 1.8907,
+          "max": 13.695
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 875,
+          "missing": 8,
+          "mean": 7.3642,
+          "stddev": 1.4399,
+          "min": 2.0,
+          "p25": 6.5,
+          "median": 7.5,
+          "p75": 8.0,
+          "max": 12.4286
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 883,
+          "missing": 0,
+          "mean": 888.2163,
+          "stddev": 1209.8401,
+          "min": 0.0,
+          "p25": 40.0,
+          "median": 360.0,
+          "p75": 1277.5,
+          "max": 7440.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 883,
+          "missing": 0,
+          "mean": 1220.3114,
+          "stddev": 1776.2229,
+          "min": 0.0,
+          "p25": 45.0,
+          "median": 420.0,
+          "p75": 1680.0,
+          "max": 12480.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 883,
+          "missing": 0,
+          "mean": 4881.2458,
+          "stddev": 7104.8916,
+          "min": 0.0,
+          "p25": 180.0,
+          "median": 1680.0,
+          "p75": 6720.0,
+          "max": 49920.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 878,
+          "missing": 5,
+          "mean": 343.8964,
+          "stddev": 199.2915,
+          "min": 11.0,
+          "p25": 180.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1020.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 772,
+          "missing": 111,
+          "mean": 2454.1205,
+          "stddev": 1024.4533,
+          "min": 3.0,
+          "p25": 1753.5,
+          "median": 2336.5,
+          "p75": 2981.0,
+          "max": 8241.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 772,
+          "missing": 111,
+          "mean": 95.3077,
+          "stddev": 47.2806,
+          "min": 0.01,
+          "p25": 64.325,
+          "median": 88.98,
+          "p75": 118.21,
+          "max": 545.2
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 772,
+          "missing": 111,
+          "mean": 283.4135,
+          "stddev": 137.1094,
+          "min": 1.1,
+          "p25": 187.43,
+          "median": 265.005,
+          "p75": 355.3275,
+          "max": 1222.34
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 772,
+          "missing": 111,
+          "mean": 95.3365,
+          "stddev": 49.7791,
+          "min": 0.0,
+          "p25": 58.0825,
+          "median": 87.89,
+          "p75": 123.43,
+          "max": 373.09
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 772,
+          "missing": 111,
+          "mean": 19.0541,
+          "stddev": 12.3428,
+          "min": 0.0,
+          "p25": 10.4,
+          "median": 16.5,
+          "p75": 24.525,
+          "max": 103.4
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 772,
+          "missing": 111,
+          "mean": 120.6361,
+          "stddev": 92.433,
+          "min": 0.0,
+          "p25": 60.075,
+          "median": 103.275,
+          "p75": 157.1675,
+          "max": 980.92
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 772,
+          "missing": 111,
+          "mean": 4056.443,
+          "stddev": 1993.102,
+          "min": 85.0,
+          "p25": 2728.5,
+          "median": 3736.5,
+          "p75": 4964.75,
+          "max": 18073.0
+        }
+      }
+    },
+    {
+      "age_band": "60-69",
+      "age_min": 60,
+      "age_max": 69,
+      "gender": "female",
+      "records": 1025,
+      "metrics": {
+        "demographic.age": {
+          "observed": 1025,
+          "missing": 0,
+          "mean": 64.0576,
+          "stddev": 2.8647,
+          "min": 60.0,
+          "p25": 61.0,
+          "median": 64.0,
+          "p75": 67.0,
+          "max": 69.0
+        },
+        "body.height_cm": {
+          "observed": 980,
+          "missing": 45,
+          "mean": 158.401,
+          "stddev": 6.8154,
+          "min": 138.4,
+          "p25": 153.9,
+          "median": 158.3,
+          "p75": 163.0,
+          "max": 179.8
+        },
+        "body.weight_kg": {
+          "observed": 981,
+          "missing": 44,
+          "mean": 78.3549,
+          "stddev": 20.8379,
+          "min": 38.5,
+          "p25": 64.2,
+          "median": 75.2,
+          "p75": 88.9,
+          "max": 219.6
+        },
+        "body.BMI_kg_m2": {
+          "observed": 974,
+          "missing": 51,
+          "mean": 30.9799,
+          "stddev": 7.2836,
+          "min": 15.5,
+          "p25": 25.8,
+          "median": 29.9,
+          "p75": 35.275,
+          "max": 58.9
+        },
+        "body.waist_cm": {
+          "observed": 929,
+          "missing": 96,
+          "mean": 102.4347,
+          "stddev": 15.6881,
+          "min": 67.0,
+          "p25": 91.7,
+          "median": 101.4,
+          "p75": 112.8,
+          "max": 164.0
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 922,
+          "missing": 103,
+          "mean": 131.6715,
+          "stddev": 19.6994,
+          "min": 79.6667,
+          "p25": 118.0,
+          "median": 129.0,
+          "p75": 142.0,
+          "max": 210.3333
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 920,
+          "missing": 105,
+          "mean": 71.6687,
+          "stddev": 11.7959,
+          "min": 32.0,
+          "p25": 64.0,
+          "median": 71.6667,
+          "p75": 78.75,
+          "max": 128.0
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 463,
+          "missing": 562,
+          "mean": 6.8568,
+          "stddev": 2.6515,
+          "min": 2.75,
+          "p25": 5.5,
+          "median": 6.0,
+          "p75": 6.99,
+          "max": 25.6
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 456,
+          "missing": 569,
+          "mean": 17.5652,
+          "stddev": 26.442,
+          "min": 1.65,
+          "p25": 6.82,
+          "median": 11.26,
+          "p75": 18.07,
+          "max": 255.46
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 437,
+          "missing": 588,
+          "mean": 6.4561,
+          "stddev": 14.5622,
+          "min": 0.3828,
+          "p25": 1.8222,
+          "median": 3.15,
+          "p75": 5.5553,
+          "max": 179.1792
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 952,
+          "missing": 73,
+          "mean": 6.2664,
+          "stddev": 1.3451,
+          "min": 4.5,
+          "p25": 5.6,
+          "median": 5.85,
+          "p75": 6.4,
+          "max": 17.0
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 444,
+          "missing": 581,
+          "mean": 2.9571,
+          "stddev": 0.9789,
+          "min": 0.465,
+          "p25": 2.25,
+          "median": 2.87,
+          "p75": 3.5755,
+          "max": 6.646
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 937,
+          "missing": 88,
+          "mean": 1.5185,
+          "stddev": 0.4465,
+          "min": 0.47,
+          "p25": 1.19,
+          "median": 1.45,
+          "p75": 1.76,
+          "max": 5.84
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 445,
+          "missing": 580,
+          "mean": 1.3148,
+          "stddev": 0.7053,
+          "min": 0.203,
+          "p25": 0.835,
+          "median": 1.152,
+          "p75": 1.637,
+          "max": 4.55
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 1019,
+          "missing": 6,
+          "mean": 7.7866,
+          "stddev": 1.6111,
+          "min": 2.8571,
+          "p25": 7.0,
+          "median": 8.0,
+          "p75": 8.8571,
+          "max": 14.0
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 1025,
+          "missing": 0,
+          "mean": 404.2176,
+          "stddev": 862.9331,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 100.0,
+          "p75": 360.0,
+          "max": 8400.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 1025,
+          "missing": 0,
+          "mean": 502.2605,
+          "stddev": 1160.4999,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 120.0,
+          "p75": 450.0,
+          "max": 12600.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 1025,
+          "missing": 0,
+          "mean": 2009.042,
+          "stddev": 4641.9994,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 480.0,
+          "p75": 1800.0,
+          "max": 50400.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 1006,
+          "missing": 19,
+          "mean": 331.4771,
+          "stddev": 200.0087,
+          "min": 0.0,
+          "p25": 180.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1320.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 911,
+          "missing": 114,
+          "mean": 1669.0285,
+          "stddev": 720.3189,
+          "min": 113.0,
+          "p25": 1165.0,
+          "median": 1551.0,
+          "p75": 2037.5,
+          "max": 5213.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 911,
+          "missing": 114,
+          "mean": 64.2846,
+          "stddev": 30.8606,
+          "min": 2.89,
+          "p25": 43.275,
+          "median": 59.67,
+          "p75": 78.745,
+          "max": 257.21
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 911,
+          "missing": 114,
+          "mean": 201.125,
+          "stddev": 94.1582,
+          "min": 13.85,
+          "p25": 134.89,
+          "median": 190.82,
+          "p75": 249.975,
+          "max": 818.84
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 911,
+          "missing": 114,
+          "mean": 67.8738,
+          "stddev": 38.3663,
+          "min": 1.97,
+          "p25": 40.07,
+          "median": 60.55,
+          "p75": 87.835,
+          "max": 268.51
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 911,
+          "missing": 114,
+          "mean": 15.4292,
+          "stddev": 8.8839,
+          "min": 0.1,
+          "p25": 8.9,
+          "median": 13.9,
+          "p75": 20.0,
+          "max": 53.0
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 911,
+          "missing": 114,
+          "mean": 84.9584,
+          "stddev": 57.0338,
+          "min": 1.53,
+          "p25": 45.41,
+          "median": 72.9,
+          "p75": 109.2,
+          "max": 546.59
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 911,
+          "missing": 114,
+          "mean": 2830.8968,
+          "stddev": 1432.5947,
+          "min": 144.0,
+          "p25": 1859.0,
+          "median": 2541.0,
+          "p75": 3503.5,
+          "max": 12218.0
+        }
+      }
+    },
+    {
+      "age_band": "60-69",
+      "age_min": 60,
+      "age_max": 69,
+      "gender": "male",
+      "records": 1028,
+      "metrics": {
+        "demographic.age": {
+          "observed": 1028,
+          "missing": 0,
+          "mean": 63.9718,
+          "stddev": 2.8704,
+          "min": 60.0,
+          "p25": 61.0,
+          "median": 64.0,
+          "p75": 66.0,
+          "max": 69.0
+        },
+        "body.height_cm": {
+          "observed": 967,
+          "missing": 61,
+          "mean": 172.2395,
+          "stddev": 7.5593,
+          "min": 148.2,
+          "p25": 167.0,
+          "median": 172.2,
+          "p75": 177.0,
+          "max": 197.7
+        },
+        "body.weight_kg": {
+          "observed": 965,
+          "missing": 63,
+          "mean": 87.6052,
+          "stddev": 20.2954,
+          "min": 42.8,
+          "p25": 73.5,
+          "median": 84.2,
+          "p75": 98.0,
+          "max": 174.0
+        },
+        "body.BMI_kg_m2": {
+          "observed": 964,
+          "missing": 64,
+          "mean": 29.4176,
+          "stddev": 6.0069,
+          "min": 15.1,
+          "p25": 25.3,
+          "median": 28.5,
+          "p75": 32.725,
+          "max": 56.3
+        },
+        "body.waist_cm": {
+          "observed": 936,
+          "missing": 92,
+          "mean": 105.0575,
+          "stddev": 15.2928,
+          "min": 65.9,
+          "p25": 94.8,
+          "median": 103.3,
+          "p75": 113.5,
+          "max": 169.6
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 936,
+          "missing": 92,
+          "mean": 132.4094,
+          "stddev": 18.5047,
+          "min": 86.0,
+          "p25": 120.0,
+          "median": 130.3333,
+          "p75": 143.3333,
+          "max": 231.3333
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 931,
+          "missing": 97,
+          "mean": 73.9996,
+          "stddev": 11.8575,
+          "min": 30.6667,
+          "p25": 66.6667,
+          "median": 73.3333,
+          "p75": 81.3333,
+          "max": 117.3333
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 473,
+          "missing": 555,
+          "mean": 6.9882,
+          "stddev": 2.5954,
+          "min": 3.55,
+          "p25": 5.66,
+          "median": 6.11,
+          "p75": 7.22,
+          "max": 23.8
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 462,
+          "missing": 566,
+          "mean": 14.6363,
+          "stddev": 18.8818,
+          "min": 0.71,
+          "p25": 6.46,
+          "median": 10.25,
+          "p75": 16.3175,
+          "max": 251.52
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 431,
+          "missing": 597,
+          "mean": 4.7203,
+          "stddev": 7.8917,
+          "min": 0.1489,
+          "p25": 1.817,
+          "median": 2.8602,
+          "p75": 5.1031,
+          "max": 120.7296
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 955,
+          "missing": 73,
+          "mean": 6.2409,
+          "stddev": 1.3069,
+          "min": 3.8,
+          "p25": 5.5,
+          "median": 5.9,
+          "p75": 6.5,
+          "max": 14.3
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 447,
+          "missing": 581,
+          "mean": 2.817,
+          "stddev": 1.0048,
+          "min": 0.621,
+          "p25": 2.095,
+          "median": 2.715,
+          "p75": 3.439,
+          "max": 6.853
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 939,
+          "missing": 89,
+          "mean": 1.2713,
+          "stddev": 0.4087,
+          "min": 0.49,
+          "p25": 1.01,
+          "median": 1.19,
+          "p75": 1.47,
+          "max": 3.8
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 451,
+          "missing": 577,
+          "mean": 1.3575,
+          "stddev": 1.3587,
+          "min": 0.26,
+          "p25": 0.796,
+          "median": 1.129,
+          "p75": 1.558,
+          "max": 24.172
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 1018,
+          "missing": 10,
+          "mean": 7.6343,
+          "stddev": 1.6844,
+          "min": 2.0,
+          "p25": 6.8571,
+          "median": 7.6429,
+          "p75": 8.5,
+          "max": 14.5
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 1027,
+          "missing": 1,
+          "mean": 616.8092,
+          "stddev": 1012.6416,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 210.0,
+          "p75": 720.0,
+          "max": 7080.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 1027,
+          "missing": 1,
+          "mean": 835.6855,
+          "stddev": 1494.8634,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 240.0,
+          "p75": 900.0,
+          "max": 10620.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 1027,
+          "missing": 1,
+          "mean": 3342.742,
+          "stddev": 5979.4536,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 960.0,
+          "p75": 3600.0,
+          "max": 42480.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 1017,
+          "missing": 11,
+          "mean": 344.4533,
+          "stddev": 199.0265,
+          "min": 4.0,
+          "p25": 180.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1200.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 920,
+          "missing": 108,
+          "mean": 2236.9815,
+          "stddev": 997.5284,
+          "min": 60.0,
+          "p25": 1550.75,
+          "median": 2104.5,
+          "p75": 2794.5,
+          "max": 8369.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 920,
+          "missing": 108,
+          "mean": 86.6402,
+          "stddev": 43.4018,
+          "min": 0.0,
+          "p25": 57.4675,
+          "median": 79.475,
+          "p75": 108.195,
+          "max": 285.06
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 920,
+          "missing": 108,
+          "mean": 261.0484,
+          "stddev": 123.0992,
+          "min": 5.88,
+          "p25": 176.935,
+          "median": 244.365,
+          "p75": 320.9675,
+          "max": 1030.76
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 920,
+          "missing": 108,
+          "mean": 89.0425,
+          "stddev": 50.7898,
+          "min": 0.0,
+          "p25": 53.995,
+          "median": 81.725,
+          "p75": 114.43,
+          "max": 359.05
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 920,
+          "missing": 108,
+          "mean": 18.5896,
+          "stddev": 12.147,
+          "min": 0.0,
+          "p25": 10.0,
+          "median": 15.9,
+          "p75": 23.6,
+          "max": 87.7
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 920,
+          "missing": 108,
+          "mean": 107.2234,
+          "stddev": 73.1942,
+          "min": 0.5,
+          "p25": 55.845,
+          "median": 93.72,
+          "p75": 141.895,
+          "max": 621.55
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 920,
+          "missing": 108,
+          "mean": 3636.9522,
+          "stddev": 1798.0633,
+          "min": 110.0,
+          "p25": 2391.75,
+          "median": 3401.0,
+          "p75": 4558.0,
+          "max": 12300.0
+        }
+      }
+    },
+    {
+      "age_band": "70-79",
+      "age_min": 70,
+      "age_max": 79,
+      "gender": "female",
+      "records": 575,
+      "metrics": {
+        "demographic.age": {
+          "observed": 575,
+          "missing": 0,
+          "mean": 74.04,
+          "stddev": 2.8192,
+          "min": 70.0,
+          "p25": 72.0,
+          "median": 74.0,
+          "p75": 76.0,
+          "max": 79.0
+        },
+        "body.height_cm": {
+          "observed": 532,
+          "missing": 43,
+          "mean": 156.9241,
+          "stddev": 6.5454,
+          "min": 129.7,
+          "p25": 152.8,
+          "median": 156.8,
+          "p75": 161.425,
+          "max": 175.6
+        },
+        "body.weight_kg": {
+          "observed": 532,
+          "missing": 43,
+          "mean": 74.1726,
+          "stddev": 17.401,
+          "min": 42.2,
+          "p25": 61.7,
+          "median": 71.7,
+          "p75": 83.4,
+          "max": 144.7
+        },
+        "body.BMI_kg_m2": {
+          "observed": 529,
+          "missing": 46,
+          "mean": 29.9552,
+          "stddev": 6.4235,
+          "min": 18.5,
+          "p25": 25.5,
+          "median": 29.0,
+          "p75": 33.4,
+          "max": 56.6
+        },
+        "body.waist_cm": {
+          "observed": 488,
+          "missing": 87,
+          "mean": 101.5252,
+          "stddev": 14.1267,
+          "min": 67.4,
+          "p25": 92.0,
+          "median": 100.5,
+          "p75": 110.125,
+          "max": 148.1
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 496,
+          "missing": 79,
+          "mean": 136.5917,
+          "stddev": 20.0848,
+          "min": 88.3333,
+          "p25": 122.6667,
+          "median": 135.0,
+          "p75": 149.3333,
+          "max": 210.6667
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 490,
+          "missing": 85,
+          "mean": 68.2116,
+          "stddev": 11.5598,
+          "min": 31.3333,
+          "p25": 61.0,
+          "median": 68.0,
+          "p75": 75.3333,
+          "max": 126.0
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 253,
+          "missing": 322,
+          "mean": 6.5915,
+          "stddev": 2.1292,
+          "min": 4.22,
+          "p25": 5.55,
+          "median": 6.05,
+          "p75": 6.77,
+          "max": 20.3
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 247,
+          "missing": 328,
+          "mean": 16.7676,
+          "stddev": 39.0514,
+          "min": 2.58,
+          "p25": 6.155,
+          "median": 10.15,
+          "p75": 15.33,
+          "max": 485.1
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 229,
+          "missing": 346,
+          "mean": 4.9883,
+          "stddev": 11.9482,
+          "min": 0.6084,
+          "p25": 1.6372,
+          "median": 2.7806,
+          "p75": 4.3971,
+          "max": 122.0296
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 521,
+          "missing": 54,
+          "mean": 6.1564,
+          "stddev": 1.1172,
+          "min": 4.7,
+          "p25": 5.5,
+          "median": 5.8,
+          "p75": 6.4,
+          "max": 13.6
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 234,
+          "missing": 341,
+          "mean": 2.9775,
+          "stddev": 1.1242,
+          "min": 0.647,
+          "p25": 2.224,
+          "median": 2.896,
+          "p75": 3.517,
+          "max": 9.232
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 506,
+          "missing": 69,
+          "mean": 1.5687,
+          "stddev": 0.4518,
+          "min": 0.67,
+          "p25": 1.24,
+          "median": 1.53,
+          "p75": 1.81,
+          "max": 3.85
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 235,
+          "missing": 340,
+          "mean": 1.2561,
+          "stddev": 0.6047,
+          "min": 0.203,
+          "p25": 0.875,
+          "median": 1.14,
+          "p75": 1.5075,
+          "max": 4.697
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 571,
+          "missing": 4,
+          "mean": 8.0599,
+          "stddev": 1.5057,
+          "min": 2.0,
+          "p25": 7.0,
+          "median": 8.0,
+          "p75": 9.0,
+          "max": 12.3571
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 575,
+          "missing": 0,
+          "mean": 300.5026,
+          "stddev": 529.2618,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 90.0,
+          "p75": 360.0,
+          "max": 4200.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 575,
+          "missing": 0,
+          "mean": 353.6591,
+          "stddev": 665.5509,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 90.0,
+          "p75": 410.0,
+          "max": 5100.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 575,
+          "missing": 0,
+          "mean": 1414.6365,
+          "stddev": 2662.2037,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 360.0,
+          "p75": 1640.0,
+          "max": 20400.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 569,
+          "missing": 6,
+          "mean": 339.6503,
+          "stddev": 179.031,
+          "min": 0.0,
+          "p25": 240.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1080.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 496,
+          "missing": 79,
+          "mean": 1614.1653,
+          "stddev": 656.7131,
+          "min": 25.0,
+          "p25": 1178.25,
+          "median": 1521.0,
+          "p75": 1961.25,
+          "max": 4844.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 496,
+          "missing": 79,
+          "mean": 62.6697,
+          "stddev": 29.0871,
+          "min": 0.0,
+          "p25": 41.79,
+          "median": 59.085,
+          "p75": 77.5925,
+          "max": 181.73
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 496,
+          "missing": 79,
+          "mean": 200.2324,
+          "stddev": 90.0395,
+          "min": 6.41,
+          "p25": 139.7425,
+          "median": 185.875,
+          "p75": 251.02,
+          "max": 714.05
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 496,
+          "missing": 79,
+          "mean": 63.8482,
+          "stddev": 33.3406,
+          "min": 0.0,
+          "p25": 39.8975,
+          "median": 58.345,
+          "p75": 81.17,
+          "max": 207.09
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 496,
+          "missing": 79,
+          "mean": 15.7022,
+          "stddev": 8.9303,
+          "min": 0.0,
+          "p25": 9.6,
+          "median": 13.6,
+          "p75": 19.9,
+          "max": 69.3
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 496,
+          "missing": 79,
+          "mean": 86.2589,
+          "stddev": 51.5593,
+          "min": 3.39,
+          "p25": 49.885,
+          "median": 77.245,
+          "p75": 109.805,
+          "max": 351.99
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 496,
+          "missing": 79,
+          "mean": 2638.1996,
+          "stddev": 1306.9402,
+          "min": 9.0,
+          "p25": 1757.75,
+          "median": 2410.5,
+          "p75": 3242.25,
+          "max": 8980.0
+        }
+      }
+    },
+    {
+      "age_band": "70-79",
+      "age_min": 70,
+      "age_max": 79,
+      "gender": "male",
+      "records": 620,
+      "metrics": {
+        "demographic.age": {
+          "observed": 620,
+          "missing": 0,
+          "mean": 73.8113,
+          "stddev": 2.8633,
+          "min": 70.0,
+          "p25": 71.0,
+          "median": 74.0,
+          "p75": 76.0,
+          "max": 79.0
+        },
+        "body.height_cm": {
+          "observed": 573,
+          "missing": 47,
+          "mean": 171.2461,
+          "stddev": 7.2817,
+          "min": 149.8,
+          "p25": 166.5,
+          "median": 171.1,
+          "p75": 176.0,
+          "max": 193.1
+        },
+        "body.weight_kg": {
+          "observed": 571,
+          "missing": 49,
+          "mean": 84.7653,
+          "stddev": 19.3825,
+          "min": 36.8,
+          "p25": 70.9,
+          "median": 81.8,
+          "p75": 96.65,
+          "max": 170.8
+        },
+        "body.BMI_kg_m2": {
+          "observed": 571,
+          "missing": 49,
+          "mean": 28.7753,
+          "stddev": 5.6967,
+          "min": 14.9,
+          "p25": 25.2,
+          "median": 28.1,
+          "p75": 31.75,
+          "max": 56.0
+        },
+        "body.waist_cm": {
+          "observed": 540,
+          "missing": 80,
+          "mean": 105.4824,
+          "stddev": 14.5638,
+          "min": 67.6,
+          "p25": 95.6,
+          "median": 104.6,
+          "p75": 114.7,
+          "max": 156.1
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 548,
+          "missing": 72,
+          "mean": 133.6943,
+          "stddev": 19.3263,
+          "min": 83.0,
+          "p25": 121.3333,
+          "median": 131.8333,
+          "p75": 143.75,
+          "max": 214.0
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 544,
+          "missing": 76,
+          "mean": 67.8511,
+          "stddev": 11.0083,
+          "min": 31.3333,
+          "p25": 60.6667,
+          "median": 67.5,
+          "p75": 75.3333,
+          "max": 103.3333
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 276,
+          "missing": 344,
+          "mean": 6.9879,
+          "stddev": 2.2725,
+          "min": 4.23,
+          "p25": 5.7675,
+          "median": 6.3,
+          "p75": 7.44,
+          "max": 26.6
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 272,
+          "missing": 348,
+          "mean": 18.0828,
+          "stddev": 33.0889,
+          "min": 0.71,
+          "p25": 6.4325,
+          "median": 10.435,
+          "p75": 17.595,
+          "max": 321.64
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 244,
+          "missing": 376,
+          "mean": 5.9019,
+          "stddev": 15.1023,
+          "min": 0.1455,
+          "p25": 1.7204,
+          "median": 3.0944,
+          "p75": 5.2413,
+          "max": 184.946
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 555,
+          "missing": 65,
+          "mean": 6.2151,
+          "stddev": 1.1098,
+          "min": 4.3,
+          "p25": 5.5,
+          "median": 5.9,
+          "p75": 6.6,
+          "max": 12.8
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 258,
+          "missing": 362,
+          "mean": 2.4472,
+          "stddev": 0.8067,
+          "min": 0.828,
+          "p25": 1.888,
+          "median": 2.379,
+          "p75": 2.9415,
+          "max": 5.844
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 549,
+          "missing": 71,
+          "mean": 1.3008,
+          "stddev": 0.3809,
+          "min": 0.49,
+          "p25": 1.03,
+          "median": 1.24,
+          "p75": 1.5,
+          "max": 3.15
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 260,
+          "missing": 360,
+          "mean": 1.2946,
+          "stddev": 1.207,
+          "min": 0.248,
+          "p25": 0.745,
+          "median": 1.05,
+          "p75": 1.5497,
+          "max": 16.698
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 612,
+          "missing": 8,
+          "mean": 7.8071,
+          "stddev": 1.5771,
+          "min": 2.0,
+          "p25": 7.0,
+          "median": 8.0,
+          "p75": 9.0,
+          "max": 12.5
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 620,
+          "missing": 0,
+          "mean": 537.5484,
+          "stddev": 914.2897,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 180.0,
+          "p75": 660.0,
+          "max": 8040.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 620,
+          "missing": 0,
+          "mean": 691.2258,
+          "stddev": 1272.1645,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 180.0,
+          "p75": 720.0,
+          "max": 11400.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 620,
+          "missing": 0,
+          "mean": 2764.9032,
+          "stddev": 5088.658,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 720.0,
+          "p75": 2880.0,
+          "max": 45600.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 614,
+          "missing": 6,
+          "mean": 354.3648,
+          "stddev": 192.0223,
+          "min": 0.0,
+          "p25": 240.0,
+          "median": 300.0,
+          "p75": 480.0,
+          "max": 1080.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 550,
+          "missing": 70,
+          "mean": 2041.16,
+          "stddev": 848.2978,
+          "min": 110.0,
+          "p25": 1476.5,
+          "median": 1950.0,
+          "p75": 2473.5,
+          "max": 7084.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 550,
+          "missing": 70,
+          "mean": 77.1031,
+          "stddev": 35.8959,
+          "min": 1.26,
+          "p25": 52.8425,
+          "median": 71.735,
+          "p75": 96.255,
+          "max": 255.03
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 550,
+          "missing": 70,
+          "mean": 237.2322,
+          "stddev": 113.5872,
+          "min": 14.03,
+          "p25": 159.31,
+          "median": 223.745,
+          "p75": 290.6325,
+          "max": 984.7
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 550,
+          "missing": 70,
+          "mean": 83.5751,
+          "stddev": 44.6217,
+          "min": 4.75,
+          "p25": 51.5525,
+          "median": 76.67,
+          "p75": 106.975,
+          "max": 309.85
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 550,
+          "missing": 70,
+          "mean": 17.6002,
+          "stddev": 11.1384,
+          "min": 0.0,
+          "p25": 9.325,
+          "median": 15.5,
+          "p75": 23.075,
+          "max": 66.6
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 550,
+          "missing": 70,
+          "mean": 99.5212,
+          "stddev": 68.7066,
+          "min": 2.47,
+          "p25": 54.0425,
+          "median": 84.73,
+          "p75": 129.92,
+          "max": 708.68
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 550,
+          "missing": 70,
+          "mean": 3367.1036,
+          "stddev": 1928.0101,
+          "min": 75.0,
+          "p25": 2133.0,
+          "median": 3098.5,
+          "p75": 4137.75,
+          "max": 25949.0
+        }
+      }
+    },
+    {
+      "age_band": "80-100",
+      "age_min": 80,
+      "age_max": 100,
+      "gender": "female",
+      "records": 417,
+      "metrics": {
+        "demographic.age": {
+          "observed": 417,
+          "missing": 0,
+          "mean": 80.0,
+          "stddev": 0.0,
+          "min": 80.0,
+          "p25": 80.0,
+          "median": 80.0,
+          "p75": 80.0,
+          "max": 80.0
+        },
+        "body.height_cm": {
+          "observed": 360,
+          "missing": 57,
+          "mean": 155.4267,
+          "stddev": 6.4371,
+          "min": 137.4,
+          "p25": 151.475,
+          "median": 155.3,
+          "p75": 159.325,
+          "max": 179.6
+        },
+        "body.weight_kg": {
+          "observed": 359,
+          "missing": 58,
+          "mean": 67.1284,
+          "stddev": 14.647,
+          "min": 32.4,
+          "p25": 57.2,
+          "median": 65.8,
+          "p75": 75.45,
+          "max": 119.6
+        },
+        "body.BMI_kg_m2": {
+          "observed": 359,
+          "missing": 58,
+          "mean": 27.729,
+          "stddev": 5.5785,
+          "min": 14.2,
+          "p25": 23.8,
+          "median": 27.4,
+          "p75": 30.75,
+          "max": 45.2
+        },
+        "body.waist_cm": {
+          "observed": 299,
+          "missing": 118,
+          "mean": 97.5181,
+          "stddev": 12.8923,
+          "min": 64.0,
+          "p25": 88.75,
+          "median": 97.5,
+          "p75": 106.4,
+          "max": 132.5
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 323,
+          "missing": 94,
+          "mean": 145.2962,
+          "stddev": 21.613,
+          "min": 91.3333,
+          "p25": 130.0,
+          "median": 144.6667,
+          "p75": 158.0,
+          "max": 206.0
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 319,
+          "missing": 98,
+          "mean": 66.4692,
+          "stddev": 12.8449,
+          "min": 30.6667,
+          "p25": 58.1667,
+          "median": 66.0,
+          "p75": 74.3333,
+          "max": 114.0
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 172,
+          "missing": 245,
+          "mean": 6.5143,
+          "stddev": 2.1341,
+          "min": 4.33,
+          "p25": 5.38,
+          "median": 5.91,
+          "p75": 6.77,
+          "max": 19.2
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 168,
+          "missing": 249,
+          "mean": 13.1471,
+          "stddev": 20.0868,
+          "min": 1.27,
+          "p25": 5.7475,
+          "median": 8.535,
+          "p75": 12.7975,
+          "max": 167.42
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 149,
+          "missing": 268,
+          "mean": 4.0821,
+          "stddev": 12.2034,
+          "min": 0.2822,
+          "p25": 1.4773,
+          "median": 2.231,
+          "p75": 3.3523,
+          "max": 140.544
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 356,
+          "missing": 61,
+          "mean": 6.0053,
+          "stddev": 0.9481,
+          "min": 4.2,
+          "p25": 5.5,
+          "median": 5.8,
+          "p75": 6.1,
+          "max": 13.4
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 158,
+          "missing": 259,
+          "mean": 2.6192,
+          "stddev": 0.9297,
+          "min": 0.672,
+          "p25": 1.94,
+          "median": 2.47,
+          "p75": 3.1485,
+          "max": 5.637
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 351,
+          "missing": 66,
+          "mean": 1.649,
+          "stddev": 0.4505,
+          "min": 0.8,
+          "p25": 1.33,
+          "median": 1.55,
+          "p75": 1.925,
+          "max": 3.52
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 158,
+          "missing": 259,
+          "mean": 1.1842,
+          "stddev": 0.5552,
+          "min": 0.339,
+          "p25": 0.714,
+          "median": 1.0785,
+          "p75": 1.5662,
+          "max": 3.06
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 410,
+          "missing": 7,
+          "mean": 8.4672,
+          "stddev": 1.8215,
+          "min": 2.0,
+          "p25": 7.5,
+          "median": 8.5,
+          "p75": 9.5,
+          "max": 14.0
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 417,
+          "missing": 0,
+          "mean": 185.9448,
+          "stddev": 455.4519,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 120.0,
+          "max": 3720.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 417,
+          "missing": 0,
+          "mean": 213.8106,
+          "stddev": 554.9855,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 120.0,
+          "max": 3960.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 417,
+          "missing": 0,
+          "mean": 855.2422,
+          "stddev": 2219.9421,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 480.0,
+          "max": 15840.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 411,
+          "missing": 6,
+          "mean": 397.5182,
+          "stddev": 182.6519,
+          "min": 30.0,
+          "p25": 240.0,
+          "median": 360.0,
+          "p75": 480.0,
+          "max": 1080.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 322,
+          "missing": 95,
+          "mean": 1608.0932,
+          "stddev": 623.0919,
+          "min": 263.0,
+          "p25": 1195.0,
+          "median": 1551.5,
+          "p75": 1992.25,
+          "max": 4174.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 322,
+          "missing": 95,
+          "mean": 58.4282,
+          "stddev": 24.9302,
+          "min": 13.41,
+          "p25": 40.92,
+          "median": 56.425,
+          "p75": 73.94,
+          "max": 158.42
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 322,
+          "missing": 95,
+          "mean": 199.0087,
+          "stddev": 83.4345,
+          "min": 30.04,
+          "p25": 138.5825,
+          "median": 186.11,
+          "p75": 245.7875,
+          "max": 624.14
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 322,
+          "missing": 95,
+          "mean": 65.3522,
+          "stddev": 31.6797,
+          "min": 5.61,
+          "p25": 42.1075,
+          "median": 60.9,
+          "p75": 83.9475,
+          "max": 211.84
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 322,
+          "missing": 95,
+          "mean": 14.473,
+          "stddev": 7.8515,
+          "min": 1.3,
+          "p25": 9.1,
+          "median": 12.7,
+          "p75": 17.975,
+          "max": 49.4
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 322,
+          "missing": 95,
+          "mean": 89.887,
+          "stddev": 52.5994,
+          "min": 3.53,
+          "p25": 52.1225,
+          "median": 80.14,
+          "p75": 113.7775,
+          "max": 334.36
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 322,
+          "missing": 95,
+          "mean": 2492.4534,
+          "stddev": 1027.4698,
+          "min": 634.0,
+          "p25": 1743.0,
+          "median": 2425.5,
+          "p75": 3023.5,
+          "max": 6448.0
+        }
+      }
+    },
+    {
+      "age_band": "80-100",
+      "age_min": 80,
+      "age_max": 100,
+      "gender": "male",
+      "records": 386,
+      "metrics": {
+        "demographic.age": {
+          "observed": 386,
+          "missing": 0,
+          "mean": 80.0,
+          "stddev": 0.0,
+          "min": 80.0,
+          "p25": 80.0,
+          "median": 80.0,
+          "p75": 80.0,
+          "max": 80.0
+        },
+        "body.height_cm": {
+          "observed": 338,
+          "missing": 48,
+          "mean": 169.8154,
+          "stddev": 7.2075,
+          "min": 149.2,
+          "p25": 165.4,
+          "median": 169.95,
+          "p75": 174.9,
+          "max": 186.6
+        },
+        "body.weight_kg": {
+          "observed": 335,
+          "missing": 51,
+          "mean": 79.3964,
+          "stddev": 15.379,
+          "min": 43.7,
+          "p25": 68.2,
+          "median": 78.5,
+          "p75": 89.5,
+          "max": 129.2
+        },
+        "body.BMI_kg_m2": {
+          "observed": 331,
+          "missing": 55,
+          "mean": 27.4665,
+          "stddev": 4.6271,
+          "min": 16.6,
+          "p25": 24.05,
+          "median": 27.2,
+          "p75": 30.05,
+          "max": 40.7
+        },
+        "body.waist_cm": {
+          "observed": 296,
+          "missing": 90,
+          "mean": 103.2547,
+          "stddev": 12.6277,
+          "min": 73.3,
+          "p25": 94.2,
+          "median": 103.2,
+          "p75": 111.7,
+          "max": 140.7
+        },
+        "body.systolic_bp_mmHg": {
+          "observed": 306,
+          "missing": 80,
+          "mean": 136.4161,
+          "stddev": 20.9659,
+          "min": 92.6667,
+          "p25": 121.3333,
+          "median": 136.6667,
+          "p75": 149.1667,
+          "max": 203.6667
+        },
+        "body.diastolic_bp_mmHg": {
+          "observed": 298,
+          "missing": 88,
+          "mean": 65.3423,
+          "stddev": 11.6204,
+          "min": 35.3333,
+          "p25": 57.3333,
+          "median": 64.0,
+          "p75": 72.9167,
+          "max": 102.0
+        },
+        "metabolic.glucose_mmol_L": {
+          "observed": 149,
+          "missing": 237,
+          "mean": 6.8344,
+          "stddev": 1.8858,
+          "min": 3.94,
+          "p25": 5.72,
+          "median": 6.33,
+          "p75": 7.33,
+          "max": 15.7
+        },
+        "metabolic.insulin_uU_mL": {
+          "observed": 148,
+          "missing": 238,
+          "mean": 11.0711,
+          "stddev": 10.826,
+          "min": 2.44,
+          "p25": 5.64,
+          "median": 9.08,
+          "p75": 12.5225,
+          "max": 114.59
+        },
+        "metabolic.HOMA_IR": {
+          "observed": 132,
+          "missing": 254,
+          "mean": 3.2271,
+          "stddev": 2.506,
+          "min": 0.6203,
+          "p25": 1.6422,
+          "median": 2.5219,
+          "p75": 3.9123,
+          "max": 14.5339
+        },
+        "metabolic.HbA1c_percent": {
+          "observed": 330,
+          "missing": 56,
+          "mean": 6.1118,
+          "stddev": 0.9071,
+          "min": 4.4,
+          "p25": 5.6,
+          "median": 5.9,
+          "p75": 6.3,
+          "max": 10.3
+        },
+        "metabolic.LDL_mmol_L": {
+          "observed": 137,
+          "missing": 249,
+          "mean": 2.4265,
+          "stddev": 0.8415,
+          "min": 0.776,
+          "p25": 1.784,
+          "median": 2.25,
+          "p75": 2.948,
+          "max": 4.37
+        },
+        "metabolic.HDL_mmol_L": {
+          "observed": 325,
+          "missing": 61,
+          "mean": 1.3087,
+          "stddev": 0.3811,
+          "min": 0.49,
+          "p25": 1.03,
+          "median": 1.24,
+          "p75": 1.55,
+          "max": 2.61
+        },
+        "metabolic.triglyceride_mmol_L": {
+          "observed": 138,
+          "missing": 248,
+          "mean": 1.2149,
+          "stddev": 0.8344,
+          "min": 0.237,
+          "p25": 0.7057,
+          "median": 1.033,
+          "p75": 1.4763,
+          "max": 7.045
+        },
+        "lifestyle.sleep_hours": {
+          "observed": 382,
+          "missing": 4,
+          "mean": 8.3001,
+          "stddev": 1.7196,
+          "min": 2.0,
+          "p25": 7.2857,
+          "median": 8.0,
+          "p75": 9.2143,
+          "max": 13.5
+        },
+        "lifestyle.activity.minutes_per_week": {
+          "observed": 386,
+          "missing": 0,
+          "mean": 399.0285,
+          "stddev": 873.6486,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 20.0,
+          "p75": 420.0,
+          "max": 7500.0
+        },
+        "lifestyle.activity.equivalent_minutes_per_week": {
+          "observed": 386,
+          "missing": 0,
+          "mean": 512.3705,
+          "stddev": 1254.4261,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 20.0,
+          "p75": 480.0,
+          "max": 11700.0
+        },
+        "lifestyle.activity.MET_minutes_per_week": {
+          "observed": 386,
+          "missing": 0,
+          "mean": 2049.4819,
+          "stddev": 5017.7042,
+          "min": 0.0,
+          "p25": 0.0,
+          "median": 80.0,
+          "p75": 1920.0,
+          "max": 46800.0
+        },
+        "lifestyle.activity.sedentary_minutes_per_day": {
+          "observed": 383,
+          "missing": 3,
+          "mean": 391.3577,
+          "stddev": 204.4741,
+          "min": 30.0,
+          "p25": 240.0,
+          "median": 360.0,
+          "p75": 480.0,
+          "max": 1380.0
+        },
+        "lifestyle.diet.energy_kcal": {
+          "observed": 296,
+          "missing": 90,
+          "mean": 1933.8378,
+          "stddev": 759.2882,
+          "min": 327.0,
+          "p25": 1392.5,
+          "median": 1808.5,
+          "p75": 2432.25,
+          "max": 4936.0
+        },
+        "lifestyle.diet.protein_g": {
+          "observed": 296,
+          "missing": 90,
+          "mean": 73.3689,
+          "stddev": 31.3634,
+          "min": 11.88,
+          "p25": 50.8825,
+          "median": 69.515,
+          "p75": 90.85,
+          "max": 185.63
+        },
+        "lifestyle.diet.carbohydrate_g": {
+          "observed": 296,
+          "missing": 90,
+          "mean": 230.0561,
+          "stddev": 103.974,
+          "min": 41.08,
+          "p25": 153.835,
+          "median": 220.205,
+          "p75": 289.4125,
+          "max": 760.0
+        },
+        "lifestyle.diet.total_fat_g": {
+          "observed": 296,
+          "missing": 90,
+          "mean": 79.8435,
+          "stddev": 37.7277,
+          "min": 8.76,
+          "p25": 51.9825,
+          "median": 74.995,
+          "p75": 101.1175,
+          "max": 227.6
+        },
+        "lifestyle.diet.fiber_g": {
+          "observed": 296,
+          "missing": 90,
+          "mean": 16.1764,
+          "stddev": 10.181,
+          "min": 0.4,
+          "p25": 9.075,
+          "median": 14.2,
+          "p75": 21.2,
+          "max": 69.0
+        },
+        "lifestyle.diet.total_sugar_g": {
+          "observed": 296,
+          "missing": 90,
+          "mean": 103.5143,
+          "stddev": 67.0101,
+          "min": 7.84,
+          "p25": 57.7,
+          "median": 94.085,
+          "p75": 133.375,
+          "max": 490.66
+        },
+        "lifestyle.diet.sodium_mg": {
+          "observed": 296,
+          "missing": 90,
+          "mean": 3110.1081,
+          "stddev": 1341.0307,
+          "min": 744.0,
+          "p25": 2166.5,
+          "median": 2784.5,
+          "p75": 3879.5,
+          "max": 8867.0
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "这是 NHANES 横断面人群参照，不是个人纵向趋势。",
+    "当前统计为未加权描述统计，不用于正式美国人群估计。",
+    "不能用该参照补填 Vivo 或其他设备缺失的个人测量值。",
+    "聚合产物不包含 user_id、SEQN 或任何个体级记录。",
+    "年龄和性别分层仅覆盖当前 NHANES 输出中可识别的 female/male 记录。"
+  ]
+}
